@@ -120,6 +120,71 @@ header {
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0,0,0,0.15);
 }
+/*CONTENIDO DINÁMICO: INICIO*/
+
+   .contenido-dinamico {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.inicio-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.inicio-subtitle {
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/*SECCIÓN MISIÓN & VISIÓN*/
+
+   .mision-vision {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.mv-box {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.mv-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--header2);
+    margin-bottom: 10px;
+}
+
+.mv-text {
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.15rem;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* LÍNEA DIVISORIA ENTRE SECCIONES */
+.seccion-divider {
+    width: 80%;
+    height: 2px;
+    background-color: rgba(0,0,0,0.15);
+    margin: 50px auto;
+    border-radius: 50px;
+}
+
+
 
 /*NEWSLETTER*/
 .newsletter {

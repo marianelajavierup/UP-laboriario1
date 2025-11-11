@@ -84,15 +84,68 @@
 
 
 <!--ÁREA DINÁMICA (FONDO BEIGE) -->
-<section id="content-area" class="content-area py-5 bg1">
+<!-- ÁREA DINÁMICA (FONDO BEIGE) -->
+
+<!-- ✅ SECCIÓN INICIO -->
+<section id="seccion-inicio" class="bg1 py-5">
+
+    <!-- TEXTOS SUPERIORES -->
+    <div class="contenido-dinamico mb-5 container text-center">
+        <h2 class="inicio-title">
+            El presente proyecto consiste en el diseño y desarrollo de un sitio web para un restaurante ficticio, denominado Sabores Libres.
+        </h2>
+        <h3 class="inicio-subtitle">
+            La propuesta surge como una idea de negocio orientada a personas celíacas, pero abierta a todo público, con el objetivo de ofrecer un espacio gastronómico que garantice comida 100% libre de gluten y de preocupaciones ante la contaminación cruzada.
+        </h3>
+    </div>
+
+    <!-- MISIÓN Y VISIÓN -->
+    <div class="mision-vision container mt-5">
+        <div class="row justify-content-center g-4">
+
+            <!-- Misión -->
+            <div class="col-md-6 col-12">
+                <div class="mv-box">
+                    <h2 class="mv-title">MISIÓN</h2>
+                    <h3 class="mv-text">
+                        Brindar a la comunidad celíaca y no celíaca una experiencia gastronómica única,
+                        ofreciendo un menú íntegramente sin TACC, elaborado en el momento, con ingredientes
+                        frescos, seguros y sabrosos, en un espacio confortable donde todos puedan disfrutar
+                        sin restricciones ni preocupaciones.
+                    </h3>
+                </div>
+            </div>
+
+            <!-- Visión -->
+            <div class="col-md-6 col-12">
+                <div class="mv-box">
+                    <h2 class="mv-title">VISIÓN</h2>
+                    <h3 class="mv-text">
+                        Convertirse en un referente en gastronomía libre de gluten, tanto a nivel presencial
+                        como digital, ofreciendo un restaurante y tienda online que combinen innovación,
+                        confianza y disfrute, contribuyendo a una vida más saludable y libre de barreras alimenticias.
+                    </h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!--LÍNEA DIVISORIA-->
+<div class="seccion-divider"></div>
+
+<!--SECCIÓN TIENDA-->
+<section id="seccion-tienda" class="bg1 py-5">
 
     <div class="container text-center">
 
         <h2 class="mb-4">TIENDA</h2>
 
-        <!--PRODUCTOS-->
         <div class="row justify-content-center g-4">
 
+            <!-- Producto 1 -->
             <div class="col-6 col-md-2">
                 <div class="producto">
                     <img src="img/producto1.jpg" class="img-fluid mb-2" alt="">
@@ -101,6 +154,7 @@
                 </div>
             </div>
 
+            <!-- Producto 2 -->
             <div class="col-6 col-md-2">
                 <div class="producto">
                     <img src="img/producto2.jpg" class="img-fluid mb-2" alt="">
@@ -109,6 +163,7 @@
                 </div>
             </div>
 
+            <!-- Producto 3 -->
             <div class="col-6 col-md-2">
                 <div class="producto">
                     <img src="img/producto3.jpg" class="img-fluid mb-2" alt="">
@@ -117,6 +172,7 @@
                 </div>
             </div>
 
+            <!-- Producto 4 -->
             <div class="col-6 col-md-2">
                 <div class="producto">
                     <img src="img/producto4.jpg" class="img-fluid mb-2" alt="">
@@ -125,6 +181,7 @@
                 </div>
             </div>
 
+            <!-- Producto 5 -->
             <div class="col-6 col-md-2">
                 <div class="producto">
                     <img src="img/producto5.jpg" class="img-fluid mb-2" alt="">
@@ -133,6 +190,7 @@
                 </div>
             </div>
 
+            <!-- Producto 6 -->
             <div class="col-6 col-md-2">
                 <div class="producto">
                     <img src="img/producto6.jpg" class="img-fluid mb-2" alt="">
@@ -143,56 +201,92 @@
 
         </div>
 
-        <!--NEWSLETTER-->  
+        <!-- Newsletter -->
         <section class="newsletter mt-5">
-
             <h3>Entérate de todas nuestras novedades</h3>
-        
             <div class="mt-3">
                 <input type="text" placeholder="Ingresá tu email">
                 <button>Enviar</button>
             </div>
-        
         </section>
-        
 
-        <!--RESEÑAS-->    
+        <!-- Reseñas -->
         <section class="resenas container">
             <div class="row g-4">
-        
+
                 <div class="col-md-3">
                     <div class="resena-box">
                         <h4>Reseña 1</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed massa nec arcu posuere cursus.</p>
+                        <p>Lorem ipsum dolor sit amet...</p>
                     </div>
                 </div>
-        
+
                 <div class="col-md-3">
                     <div class="resena-box">
                         <h4>Reseña 2</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed massa nec arcu posuere cursus.</p>
+                        <p>Lorem ipsum dolor sit amet...</p>
                     </div>
                 </div>
-        
+
                 <div class="col-md-3">
                     <div class="resena-box">
                         <h4>Reseña 3</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed massa nec arcu posuere cursus.</p>
+                        <p>Lorem ipsum dolor sit amet...</p>
                     </div>
                 </div>
-        
+
                 <div class="col-md-3">
                     <div class="resena-box">
                         <h4>Reseña 4</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed massa nec arcu posuere curso.</p>
+                        <p>Lorem ipsum dolor sit amet...</p>
                     </div>
                 </div>
-        
+
             </div>
         </section>
-        
 
     </div>
+
+</section>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        
+            const inicioSection = document.getElementById("seccion-inicio");
+            const tiendaSection = document.getElementById("seccion-tienda");
+
+        
+            // Función que muestra INICIO
+            function mostrarInicio() {
+                inicioSection.style.display = "block";
+                tiendaSection.style.display = "none";
+            }
+        
+            // Click en el tenedor (logo)
+            document.querySelector(".tenedor-header").addEventListener("click", mostrarInicio);
+        
+            // Click en INICIO del menú
+            document.querySelector('a[href="#inicio"]').addEventListener("click", function(e){
+                e.preventDefault();
+                mostrarInicio();
+            });
+        
+            // Click en ¿Quiénes somos? del footer
+            const quienes = document.querySelector('a[href="#"]').innerText === "¿Quiénes somos?" 
+                ? document.querySelector('a[href="#"]') : null;
+        
+            if (quienes) {
+                quienes.addEventListener("click", function(e){
+                    e.preventDefault();
+                    mostrarInicio();
+                });
+            }
+        
+        });
+        </script>
+        
 
 </section>
 
