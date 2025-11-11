@@ -302,46 +302,37 @@ header {
 
 }
 
-/*MENÚ TIPO REVISTA*/
-
+/* REVISTA MENÚ */
 .menu-img {
-    width: 300px;
-    height: 420px;
+    width: 350px;
+    height: 500px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
 .menu-revista {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .menu-arrow {
-    background: #E4572E;
-    color: white;
+    background: none;
     border: none;
-    font-size: 2rem;
-    padding: 10px 15px;
-    border-radius: 10px;
+    font-size: 2.5rem;
     cursor: pointer;
-    transition: 0.3s;
+    padding: 10px;
+    color: var(--header2);
 }
 
 .menu-arrow:hover {
-    background: #c64622;
+    opacity: 0.7;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .menu-pages {
-        flex-direction: column;
-        gap: 15px;
-    }
-
     .menu-img {
-        width: 80%;
-        height: auto;
+        width: 150px;
+        height: 220px;
     }
 }
-
 

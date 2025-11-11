@@ -109,7 +109,6 @@
 
                 <img id="menu-pag1" src="img/menu1.png" class="menu-img">
                 <img id="menu-pag2" src="img/menu2.png" class="menu-img">
-                <img id="menu-pag2" src="img/menu3.png" class="menu-img">
 
             </div>
 
@@ -121,6 +120,7 @@
     </div>
 
 </section>
+
 
 
 <!--SECCIÓN INICIO-->
@@ -289,87 +289,88 @@
 
 
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    
-        const inicioSection = document.getElementById("seccion-inicio");
-        const tiendaSection = document.getElementById("seccion-tienda");
-        const menuSection = document.getElementById("seccion-menu");
-    
-        function ocultarTodo() {
-            inicioSection.style.display = "none";
-            tiendaSection.style.display = "none";
-            menuSection.style.display = "none";
-        }
-    
-        function mostrarInicio() {
-            ocultarTodo();
-            inicioSection.style.display = "block";
-        }
-    
-        function mostrarMenu() {
-            ocultarTodo();
-            menuSection.style.display = "block";
-        }
-    
-        // ✅ Clic en INICIO del menú
-        document.querySelector('a[href="#inicio"]').addEventListener("click", function(e){
-            e.preventDefault();
-            mostrarInicio();
-        });
-    
-        // ✅ Clic en el tenedor
-        document.querySelector(".tenedor-header").addEventListener("click", mostrarInicio);
-    
-        // ✅ Clic en MENÚ del nav
-        document.querySelector('a[href="#menu"]').addEventListener("click", function(e){
-            e.preventDefault();
-            mostrarMenu();
-        });
-    
-        // ✅ Clic en MENÚ del footer
-        document.querySelectorAll(".footer-links a").forEach(link => {
-            if(link.innerText.trim() === "Menú"){
-                link.addEventListener("click", function(e){
-                    e.preventDefault();
-                    mostrarMenu();
-                });
-            }
-        });
-    
-    
-        /* ▬▬▬ LÓGICA DEL PASA-PÁGINAS ▬▬▬ */
-    
-        const paginas = [
-            ["img/menu1.jpg", "img/menu2.jpg"],
-            ["img/menu3.jpg", "img/menu4.jpg"]
-        ];
-    
-        let indice = 0;
-    
-        const pag1 = document.getElementById("menu-pag1");
-        const pag2 = document.getElementById("menu-pag2");
-    
-        function actualizarPaginas() {
-            pag1.src = paginas[indice][0];
-            pag2.src = paginas[indice][1];
-        }
-    
-        document.getElementById("menu-prev").addEventListener("click", () => {
-            indice = (indice - 1 + paginas.length) % paginas.length;
-            actualizarPaginas();
-        });
-    
-        document.getElementById("menu-next").addEventListener("click", () => {
-            indice = (indice + 1) % paginas.length;
-            actualizarPaginas();
-        });
-    
-    });
-    </script>
-    
-        
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-</section>
+    const inicioSection = document.getElementById("seccion-inicio");
+    const tiendaSection = document.getElementById("seccion-tienda");
+    const menuSection = document.getElementById("seccion-menu");
+
+    function ocultarTodo() {
+        inicioSection.style.display = "none";
+        tiendaSection.style.display = "none";
+        menuSection.style.display = "none";
+    }
+
+    function mostrarInicio() {
+        ocultarTodo();
+        inicioSection.style.display = "block";
+    }
+
+    function mostrarMenu() {
+        ocultarTodo();
+        menuSection.style.display = "block";
+    }
+
+    // ✅ Inicio del nav
+    document.querySelector('a[href="#inicio"]').addEventListener("click", function(e){
+        e.preventDefault();
+        mostrarInicio();
+    });
+
+    // ✅ Logo (tenedor)
+    document.querySelector(".tenedor-header").addEventListener("click", mostrarInicio);
+
+    // ✅ Menú del nav
+    document.querySelector('a[href="#menu"]').addEventListener("click", function(e){
+        e.preventDefault();
+        mostrarMenu();
+    });
+
+    // ✅ Menú del footer
+    document.querySelectorAll(".footer-links a").forEach(link => {
+        if(link.innerText.trim() === "Menú"){
+            link.addEventListener("click", function(e){
+                e.preventDefault();
+                mostrarMenu();
+            });
+        }
+    });
+
+});
+
+
+<!--SCRIPT DE PASA-PÁGINAS (SEPARADO)-->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let paginaActual = 1;
+    const totalPaginas = 6;
+
+    const pag1 = document.getElementById("menu-pag1");
+    const pag2 = document.getElementById("menu-pag2");
+
+    function actualizarPaginas() {
+        pag1.src = `img/menu${paginaActual}.png`;
+        pag2.src = `img/menu${paginaActual + 1}.png`;
+    }
+
+    document.getElementById("menu-next").addEventListener("click", function () {
+        if (paginaActual < totalPaginas - 1) {
+            paginaActual += 2;
+            actualizarPaginas();
+        }
+    });
+
+    document.getElementById("menu-prev").addEventListener("click", function () {
+        if (paginaActual > 1) {
+            paginaActual -= 2;
+            actualizarPaginas();
+        }
+    });
+
+});
+</script>
 
 
 <!--FOOTER-->
