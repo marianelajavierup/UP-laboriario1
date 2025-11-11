@@ -112,14 +112,70 @@ header {
 }
 
 /*TIENDA + PRODUCTOS*/
-.producto img {
+/*CONTENEDOR GENERAL*/
+.tienda-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/*FLECHAS*/
+.tienda-arrow {
+    background: none;
+    border: none;
+    font-size: 45px;
+    cursor: pointer;
+    color: #E4572E;
+    transition: 0.2s;
+}
+.tienda-arrow:hover {
+    transform: scale(1.15);
+}
+
+/*VIEWPORT (ventana visible)*/
+.tienda-viewport {
+    width: 80%;
+    max-width: 900px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/*TRACK (carril que se mueve)*/
+.tienda-track {
+    display: flex;
+    transition: transform 0.4s ease;  /* ✅ ANIMACIÓN */
+}
+
+/*CADA PRODUCTO*/
+.tienda-item {
+    width: 25%;              /*4 productos visibles*/
+    padding: 10px;
+    text-align: center;
+}
+
+.tienda-item img {
     width: 100%;
-    height: auto;
-    max-height: 200px;
+    height: 180px;           /*Todas iguales*/
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+.tienda-item p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 768px) {
+    .tienda-item {
+        width: 50%;   /* En móvil → 2 productos por fila */
+    }
+}
+
+
+
 /*CONTENIDO DINÁMICO: INICIO*/
 
    .contenido-dinamico {
@@ -186,28 +242,69 @@ header {
 
 
 
-/*NEWSLETTER*/
+/* NEWSLETTER */
 .newsletter {
     background: var(--botton);
     color: white;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto; /* centra todo el newsletter */
 }
 
+.newsletter h3 {
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 15px;
+}
+
+/* Contenedor del input + botón */
+.newsletter div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* no se rompe en mobile */
+}
+
+/* Input */
 .newsletter input {
     padding: 0.6rem 1rem;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 2px solid var(--header2);
     width: 260px;
 }
 
+/* Botón */
 .newsletter button {
     padding: 0.6rem 1.3rem;
-    border-radius: 10px;
+    border-radius: 8px;
     background: var(--header2);
     color: white;
     border: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+.newsletter button:hover {
+    background: var(--footer);
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .newsletter {
+        padding: 20px;
+    }
+
+    .newsletter div {
+        flex-direction: column; 
+    }
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+    }
+}
+
 
 /*RESEÑAS*/
 .resenas {
@@ -336,3 +433,143 @@ header {
     }
 }
 
+
+/*ESTILOS REVISTA – MENÚ*/
+
+
+.menu-revista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.menu-img {
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Contenedor de páginas lado a lado */
+.menu-pages {
+    display: flex;
+    gap: 15px;
+}
+
+/* Flechas */
+.menu-arrow {
+    background: var(--header2);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-arrow:hover {
+    background: var(--botton);
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE – teléfono */
+@media (max-width: 768px) {
+
+    .menu-img {
+        width: 150px;
+        height: 220px;
+        border-radius: 8px;
+    }
+
+    .menu-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+
+    .menu-pages {
+        gap: 8px;
+    }
+}
+
+
+/* BOTÓN DESCARGAR MENÚ PDF      */
+
+.btn-descargar-menu {
+    display: inline-block;
+    background: var(--header2);
+    color: white;
+    padding: 12px 28px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-descargar-menu:hover {
+    background: var(--botton);
+    transform: translateY(-3px);
+}
+
+/*TIENDA - CARRUSEL DE PRODUCTOS*/
+
+   .tienda-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.tienda-arrow {
+    background-color: #E4572E;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tienda-arrow:hover {
+    background-color: #c74621;
+}
+
+.tienda-viewport {
+    width: 80%;
+    overflow: hidden;
+}
+
+.tienda-track {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.4s ease;
+}
+
+/* Cada producto dentro del carrusel */
+.tienda-producto {
+    min-width: calc(25% - 15px); /* ✅ Vemos 4 elementos */
+    max-width: calc(25% - 15px);
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.tienda-producto img {
+    width: 100%;
+    height: 180px;        /* ✅ Todas las imágenes iguales */
+    object-fit: cover;    /* ✅ Recorte estético */
+    border-radius: 10px;
+}
