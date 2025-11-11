@@ -286,91 +286,89 @@
 
 </section>
 
-
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    
+        const inicioSection = document.getElementById("seccion-inicio");
+        const tiendaSection = document.getElementById("seccion-tienda");
+        const menuSection = document.getElementById("seccion-menu");
+    
+        function ocultarTodo() {
+            inicioSection.style.display = "none";
+            tiendaSection.style.display = "none";
+            menuSection.style.display = "none";
+        }
+    
+        function mostrarInicio() {
+            ocultarTodo();
+            inicioSection.style.display = "block";
+        }
+    
+        function mostrarMenu() {
+            ocultarTodo();
+            menuSection.style.display = "block";
+        }
+    
+        // ✅ Inicio del nav
+        document.querySelector('a[href="#inicio"]').addEventListener("click", function(e){
+            e.preventDefault();
+            mostrarInicio();
+        });
+    
+        // ✅ Logo (tenedor)
+        document.querySelector(".tenedor-header").addEventListener("click", mostrarInicio);
+    
+        // ✅ Menú del nav
+        document.querySelector('a[href="#menu"]').addEventListener("click", function(e){
+            e.preventDefault();
+            mostrarMenu();
+        });
+    
+        // ✅ Menú del footer
+        document.querySelectorAll(".footer-links a").forEach(link => {
+            if(link.innerText.trim() === "Menú"){
+                link.addEventListener("click", function(e){
+                    e.preventDefault();
+                    mostrarMenu();
+                });
+            }
+        });
+    
+    });
+    </script>
+    
+    <!-- ✅ SCRIPT DE PASA-PÁGINAS (SEPARADO) -->
     <script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const inicioSection = document.getElementById("seccion-inicio");
-    const tiendaSection = document.getElementById("seccion-tienda");
-    const menuSection = document.getElementById("seccion-menu");
-
-    function ocultarTodo() {
-        inicioSection.style.display = "none";
-        tiendaSection.style.display = "none";
-        menuSection.style.display = "none";
-    }
-
-    function mostrarInicio() {
-        ocultarTodo();
-        inicioSection.style.display = "block";
-    }
-
-    function mostrarMenu() {
-        ocultarTodo();
-        menuSection.style.display = "block";
-    }
-
-    // ✅ Inicio del nav
-    document.querySelector('a[href="#inicio"]').addEventListener("click", function(e){
-        e.preventDefault();
-        mostrarInicio();
-    });
-
-    // ✅ Logo (tenedor)
-    document.querySelector(".tenedor-header").addEventListener("click", mostrarInicio);
-
-    // ✅ Menú del nav
-    document.querySelector('a[href="#menu"]').addEventListener("click", function(e){
-        e.preventDefault();
-        mostrarMenu();
-    });
-
-    // ✅ Menú del footer
-    document.querySelectorAll(".footer-links a").forEach(link => {
-        if(link.innerText.trim() === "Menú"){
-            link.addEventListener("click", function(e){
-                e.preventDefault();
-                mostrarMenu();
-            });
+    document.addEventListener("DOMContentLoaded", function () {
+    
+        let paginaActual = 1;
+        const totalPaginas = 6;
+    
+        const pag1 = document.getElementById("menu-pag1");
+        const pag2 = document.getElementById("menu-pag2");
+    
+        function actualizarPaginas() {
+            pag1.src = `img/menu${paginaActual}.png`;
+            pag2.src = `img/menu${paginaActual + 1}.png`;
         }
+    
+        document.getElementById("menu-next").addEventListener("click", function () {
+            if (paginaActual < totalPaginas - 1) {
+                paginaActual += 2;
+                actualizarPaginas();
+            }
+        });
+    
+        document.getElementById("menu-prev").addEventListener("click", function () {
+            if (paginaActual > 1) {
+                paginaActual -= 2;
+                actualizarPaginas();
+            }
+        });
+    
     });
-
-});
-
-
-<!--SCRIPT DE PASA-PÁGINAS (SEPARADO)-->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    let paginaActual = 1;
-    const totalPaginas = 6;
-
-    const pag1 = document.getElementById("menu-pag1");
-    const pag2 = document.getElementById("menu-pag2");
-
-    function actualizarPaginas() {
-        pag1.src = `img/menu${paginaActual}.png`;
-        pag2.src = `img/menu${paginaActual + 1}.png`;
-    }
-
-    document.getElementById("menu-next").addEventListener("click", function () {
-        if (paginaActual < totalPaginas - 1) {
-            paginaActual += 2;
-            actualizarPaginas();
-        }
-    });
-
-    document.getElementById("menu-prev").addEventListener("click", function () {
-        if (paginaActual > 1) {
-            paginaActual -= 2;
-            actualizarPaginas();
-        }
-    });
-
-});
-</script>
+    </script>
+    
 
 
 <!--FOOTER-->
