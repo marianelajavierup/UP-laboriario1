@@ -84,12 +84,49 @@
 
 
 <!--ÁREA DINÁMICA (FONDO BEIGE) -->
-<!-- ÁREA DINÁMICA (FONDO BEIGE) -->
 
-<!-- ✅ SECCIÓN INICIO -->
+<!--SECCIÓN MENÚ TIPO REVISTA-->
+<section id="seccion-menu" class="bg1 py-5" style="display:none;">
+
+    <div class="container text-center">
+
+        <h2 class="mb-4">MENÚ</h2>
+
+        <!-- Botón para descargar PDF -->
+        <a href="pdf/menu.pdf" download class="btn btn-primary mb-4"
+           style="background:#E4572E; border:none;">
+            Descargar Menú en PDF
+        </a>
+
+        <!-- CONTENEDOR TIPO REVISTA -->
+        <div class="menu-revista d-flex justify-content-center align-items-center gap-3">
+
+            <!-- Flecha izquierda -->
+            <button class="menu-arrow" id="menu-prev">❮</button>
+
+            <!-- Páginas -->
+            <div class="menu-pages d-flex">
+
+                <img id="menu-pag1" src="img/menu1.png" class="menu-img">
+                <img id="menu-pag2" src="img/menu2.png" class="menu-img">
+                <img id="menu-pag2" src="img/menu3.png" class="menu-img">
+
+            </div>
+
+            <!-- Flecha derecha -->
+            <button class="menu-arrow" id="menu-next">❯</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--SECCIÓN INICIO-->
 <section id="seccion-inicio" class="bg1 py-5">
 
-    <!-- TEXTOS SUPERIORES -->
+    <!--CONCEPTO SABORES LIBRES-->
     <div class="contenido-dinamico mb-5 container text-center">
         <h2 class="inicio-title">
             El presente proyecto consiste en el diseño y desarrollo de un sitio web para un restaurante ficticio, denominado Sabores Libres.
@@ -99,11 +136,11 @@
         </h3>
     </div>
 
-    <!-- MISIÓN Y VISIÓN -->
+    <!--MISIÓN Y VISIÓN-->
     <div class="mision-vision container mt-5">
         <div class="row justify-content-center g-4">
 
-            <!-- Misión -->
+            <!--Misión-->
             <div class="col-md-6 col-12">
                 <div class="mv-box">
                     <h2 class="mv-title">MISIÓN</h2>
@@ -116,7 +153,7 @@
                 </div>
             </div>
 
-            <!-- Visión -->
+            <!--Visión-->
             <div class="col-md-6 col-12">
                 <div class="mv-box">
                     <h2 class="mv-title">VISIÓN</h2>
@@ -252,40 +289,84 @@
 
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        
-            const inicioSection = document.getElementById("seccion-inicio");
-            const tiendaSection = document.getElementById("seccion-tienda");
-
-        
-            // Función que muestra INICIO
-            function mostrarInicio() {
-                inicioSection.style.display = "block";
-                tiendaSection.style.display = "none";
-            }
-        
-            // Click en el tenedor (logo)
-            document.querySelector(".tenedor-header").addEventListener("click", mostrarInicio);
-        
-            // Click en INICIO del menú
-            document.querySelector('a[href="#inicio"]').addEventListener("click", function(e){
-                e.preventDefault();
-                mostrarInicio();
-            });
-        
-            // Click en ¿Quiénes somos? del footer
-            const quienes = document.querySelector('a[href="#"]').innerText === "¿Quiénes somos?" 
-                ? document.querySelector('a[href="#"]') : null;
-        
-            if (quienes) {
-                quienes.addEventListener("click", function(e){
+    document.addEventListener("DOMContentLoaded", function () {
+    
+        const inicioSection = document.getElementById("seccion-inicio");
+        const tiendaSection = document.getElementById("seccion-tienda");
+        const menuSection = document.getElementById("seccion-menu");
+    
+        function ocultarTodo() {
+            inicioSection.style.display = "none";
+            tiendaSection.style.display = "none";
+            menuSection.style.display = "none";
+        }
+    
+        function mostrarInicio() {
+            ocultarTodo();
+            inicioSection.style.display = "block";
+        }
+    
+        function mostrarMenu() {
+            ocultarTodo();
+            menuSection.style.display = "block";
+        }
+    
+        // ✅ Clic en INICIO del menú
+        document.querySelector('a[href="#inicio"]').addEventListener("click", function(e){
+            e.preventDefault();
+            mostrarInicio();
+        });
+    
+        // ✅ Clic en el tenedor
+        document.querySelector(".tenedor-header").addEventListener("click", mostrarInicio);
+    
+        // ✅ Clic en MENÚ del nav
+        document.querySelector('a[href="#menu"]').addEventListener("click", function(e){
+            e.preventDefault();
+            mostrarMenu();
+        });
+    
+        // ✅ Clic en MENÚ del footer
+        document.querySelectorAll(".footer-links a").forEach(link => {
+            if(link.innerText.trim() === "Menú"){
+                link.addEventListener("click", function(e){
                     e.preventDefault();
-                    mostrarInicio();
+                    mostrarMenu();
                 });
             }
-        
         });
-        </script>
+    
+    
+        /* ▬▬▬ LÓGICA DEL PASA-PÁGINAS ▬▬▬ */
+    
+        const paginas = [
+            ["img/menu1.jpg", "img/menu2.jpg"],
+            ["img/menu3.jpg", "img/menu4.jpg"]
+        ];
+    
+        let indice = 0;
+    
+        const pag1 = document.getElementById("menu-pag1");
+        const pag2 = document.getElementById("menu-pag2");
+    
+        function actualizarPaginas() {
+            pag1.src = paginas[indice][0];
+            pag2.src = paginas[indice][1];
+        }
+    
+        document.getElementById("menu-prev").addEventListener("click", () => {
+            indice = (indice - 1 + paginas.length) % paginas.length;
+            actualizarPaginas();
+        });
+    
+        document.getElementById("menu-next").addEventListener("click", () => {
+            indice = (indice + 1) % paginas.length;
+            actualizarPaginas();
+        });
+    
+    });
+    </script>
+    
         
 
 </section>

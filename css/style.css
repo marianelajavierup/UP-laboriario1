@@ -301,3 +301,47 @@ header {
     }
 
 }
+
+/*MENÚ TIPO REVISTA*/
+
+.menu-img {
+    width: 300px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.menu-revista {
+    margin-top: 20px;
+}
+
+.menu-arrow {
+    background: #E4572E;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-arrow:hover {
+    background: #c64622;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-pages {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-img {
+        width: 80%;
+        height: auto;
+    }
+}
+
+
