@@ -112,67 +112,67 @@ header {
 }
 
 /*TIENDA + PRODUCTOS*/
-/*CONTENEDOR GENERAL*/
-.tienda-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-/*FLECHAS*/
-.tienda-arrow {
-    background: none;
-    border: none;
-    font-size: 45px;
-    cursor: pointer;
-    color: #E4572E;
-    transition: 0.2s;
-}
-.tienda-arrow:hover {
-    transform: scale(1.15);
-}
-
-/*VIEWPORT (ventana visible)*/
-.tienda-viewport {
-    width: 80%;
-    max-width: 900px;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-/*TRACK (carril que se mueve)*/
-.tienda-track {
-    display: flex;
-    transition: transform 0.4s ease;  /* ✅ ANIMACIÓN */
-}
-
-/*CADA PRODUCTO*/
-.tienda-item {
-    width: 25%;              /*4 productos visibles*/
-    padding: 10px;
-    text-align: center;
-}
-
-.tienda-item img {
-    width: 100%;
-    height: 180px;           /*Todas iguales*/
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.tienda-item p {
-    margin: 5px 0 0;
-    font-size: 14px;
-}
-
-/*RESPONSIVE*/
-@media (max-width: 768px) {
-    .tienda-item {
-        width: 50%;   /* En móvil → 2 productos por fila */
+    /*Contenedor*/
+    .tienda-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
     }
-}
+    
+        /*Flechas*/
+    .tienda-arrow {
+        background: none;
+        border: none;
+        font-size: 45px;
+        cursor: pointer;
+        color: #E4572E;
+        transition: 0.2s;
+    }
+    .tienda-arrow:hover {
+        transform: scale(1.15);
+    }
+    
+        /*VIEWPORT (ventana visible)*/
+    .tienda-viewport {
+        width: 80%;
+        max-width: 900px;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+    
+        /*TRACK (carril que se mueve)*/
+    .tienda-track {
+        display: flex;
+        transition: transform 0.4s ease; 
+    }
+    
+        /*CADA PRODUCTO*/
+    .tienda-item {
+        width: 25%;            
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .tienda-item img {
+        width: 100%;
+        height: 180px;           
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .tienda-item p {
+        margin: 5px 0 0;
+        font-size: 14px;
+    }
+    
+        /*RESPONSIVE*/
+    @media (max-width: 768px) {
+        .tienda-item {
+            width: 50%;   /* En móvil → 2 productos por fila */
+        }
+    }
 
 
 
@@ -258,7 +258,7 @@ header {
     margin-bottom: 15px;
 }
 
-/* Contenedor del input + botón */
+    /* Contenedor del input + botón */
 .newsletter div {
     display: flex;
     justify-content: center;
@@ -266,7 +266,7 @@ header {
     flex-wrap: wrap; /* no se rompe en mobile */
 }
 
-/* Input */
+    /* Input */
 .newsletter input {
     padding: 0.6rem 1rem;
     border-radius: 8px;
@@ -274,7 +274,7 @@ header {
     width: 500px;
 }
 
-/* Botón */
+    /* Botón */
 .newsletter button {
     padding: 0.6rem 1.3rem;
     border-radius: 8px;
@@ -289,7 +289,7 @@ header {
     background: var(--footer);
 }
 
-/* RESPONSIVE */
+    /* RESPONSIVE */
 @media (max-width: 480px) {
     .newsletter {
         padding: 20px;
@@ -380,7 +380,7 @@ header {
     opacity: 0.7;
 }
 
-/*RESPONSIVE PANTALLA CHICA*/
+    /*RESPONSIVE FOOTER*/
 @media (max-width: 768px) {
 
     .slider-text h1 {
@@ -425,7 +425,7 @@ header {
     opacity: 0.7;
 }
 
-/* Responsive */
+    /* Responsive */
 @media (max-width: 768px) {
     .menu-img {
         width: 150px;
@@ -435,8 +435,6 @@ header {
 
 
 /*ESTILOS REVISTA – MENÚ*/
-
-
 .menu-revista {
     display: flex;
     justify-content: center;
@@ -453,13 +451,13 @@ header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-/* Contenedor de páginas lado a lado */
+    /* Contenedor de páginas lado a lado */
 .menu-pages {
     display: flex;
     gap: 15px;
 }
 
-/* Flechas */
+    /* Flechas */
 .menu-arrow {
     background: var(--header2);
     color: white;
@@ -480,7 +478,7 @@ header {
     transform: scale(1.1);
 }
 
-/* RESPONSIVE – teléfono */
+    /* RESPONSIVE REVISTA*/
 @media (max-width: 768px) {
 
     .menu-img {
@@ -521,61 +519,9 @@ header {
     transform: translateY(-3px);
 }
 
-/*TIENDA - CARRUSEL DE PRODUCTOS*/
-
-   .tienda-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.tienda-arrow {
-    background-color: #E4572E;
-    color: white;
-    border: none;
-    font-size: 2rem;
-    padding: 5px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.tienda-arrow:hover {
-    background-color: #c74621;
-}
-
-.tienda-viewport {
-    width: 80%;
-    overflow: hidden;
-}
-
-.tienda-track {
-    display: flex;
-    gap: 15px;
-    transition: transform 0.4s ease;
-}
-
-/* Cada producto dentro del carrusel */
-.tienda-producto {
-    min-width: calc(25% - 15px); 
-    max-width: calc(25% - 15px);
-    background: white;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.tienda-producto img {
-    width: 100%;
-    height: 180px; 
-    object-fit: cover; 
-    border-radius: 10px;
-}
 
 /* RESERVAS */
-/* 🔸 CONTENEDOR GENERAL DEL FORMULARIO */
+    /*CONTENEDOR GENERAL DEL FORMULARIO*/
 #seccion-reserva {
     background-color: #fff8f0; /* beige claro */
     padding: 3rem 2rem;
@@ -587,7 +533,7 @@ header {
     z-index: 10;
   }
   
-  /* 🔸 TÍTULO */
+  /*TÍTULO*/
   #seccion-reserva h2 {
     text-align: center;
     color: #e07a2c; /* naranja principal */
@@ -597,7 +543,7 @@ header {
     letter-spacing: 1px;
   }
   
-  /* 🔸 CAMPOS DEL FORMULARIO */
+    /*CAMPOS DEL FORMULARIO */
   #seccion-reserva form {
     display: flex;
     flex-direction: column;
@@ -619,7 +565,7 @@ header {
     transition: all 0.3s ease;
   }
   
-  /* 🔸 Efecto al pasar el mouse sobre los campos */
+  /*Efecto al pasar el mouse sobre los campos */
   #seccion-reserva input:hover,
   #seccion-reserva select:hover,
   #seccion-reserva textarea:hover {
@@ -627,7 +573,7 @@ header {
     background-color: #fff1e6;
   }
   
-  /* 🔸 BOTÓN PRINCIPAL */
+  /*BOTÓN PRINCIPAL */
   #seccion-reserva button {
     background-color: #e07a2c;
     color: white;
@@ -641,14 +587,14 @@ header {
     margin-top: 1rem;
   }
   
-  /* 🔸 EFECTO HOVER DEL BOTÓN */
+  /*EFECTO HOVER DEL BOTÓN */
   #seccion-reserva button:hover {
     background-color: #ff9c4a;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(224, 122, 44, 0.4);
   }
   
-  /* 🔸 MENSAJE DE CONFIRMACIÓN (paso 4) */
+  /*MENSAJE DE CONFIRMACIÓN (paso 4) */
   #mensaje-confirmacion {
     text-align: center;
     font-size: 1.2rem;
@@ -688,7 +634,7 @@ header {
     box-shadow: 0 0 6px rgba(255, 127, 0, 0.3);
   }
   
-/*SELECT FECHA Y HORA (PASO 2)*/
+    /*SELECT FECHA Y HORA (PASO 2)*/
 #seccion-reserva select.form-select {
     height: 50px;
     border-radius: 12px;
@@ -727,7 +673,6 @@ header {
   }
 
 /*SECCIÓN DELIVERY*/
-/*ESTILOS SECCIÓN DELIVERY (alineado al estilo de Reserva) */
 #seccion-delivery {
     background-color: #fff8f1; /* fondo claro cálido */
     padding: 60px 20px;
@@ -828,7 +773,7 @@ header {
 
   
 /*PROMOCION*/
-/* CONTENEDOR PRINCIPAL */
+    /* CONTENEDOR PRINCIPAL */
 .promocion-container {
     display: flex;
     justify-content: center;
@@ -843,7 +788,7 @@ header {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* TEXTO */
+    /* TEXTO */
 .promocion-text {
     flex: 1 1 350px;
     text-align: left;
@@ -863,7 +808,7 @@ header {
     margin-bottom: 20px;
 }
 
-/* BOTÓN */
+    /* BOTÓN */
 .promocion-btn {
     display: inline-block;
     background-color: #e57200;
@@ -883,7 +828,7 @@ header {
     box-shadow: 0 5px 15px rgba(249, 164, 63, 0.4);
 }
 
-/* IMAGEN */
+    /* IMAGEN */
 .promocion-img {
     flex: 1 1 300px;
     text-align: center;
@@ -900,7 +845,7 @@ header {
     transform: scale(1.03);
 }
 
-/* RESPONSIVE – MÓVIL */
+    /* RESPONSIVE PROMOCIÓN*/
 @media (max-width: 768px) {
     .promocion-container {
         flex-direction: column;
@@ -922,7 +867,7 @@ header {
     }
 }
 
-/* SECCIÓN CARGA TU CV */
+/*SECCIÓN CARGA TU CV*/
    #seccion-cv {
     background-color: #f8f5f0; /* fondo beige */
     padding: 60px 20px;
@@ -943,7 +888,7 @@ header {
     margin-bottom: 30px;
 }
 
-/* FORMULARIO */
+    /* FORMULARIO */
 #form-cv {
     background-color: #fff;
     padding: 30px;
@@ -974,7 +919,7 @@ header {
     outline: none;
 }
 
-/* BOTONES */
+    /* BOTONES */
 #form-cv .btn {
     border-radius: 8px;
     min-width: 140px;
@@ -984,7 +929,7 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Botón enviar */
+    /* Botón enviar */
 #form-cv button.btn-primary {
     background-color: #2e59a7;
     color: #fff;
@@ -997,7 +942,7 @@ header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Botón personalizado subir archivo */
+    /* Botón personalizado subir archivo */
 #form-cv .btn-upload {
     position: relative;
     overflow: hidden;
@@ -1026,13 +971,13 @@ header {
     cursor: pointer;
 }
 
-/* Ícono PDF al lado del nombre de archivo */
+    /* Ícono PDF al lado del nombre de archivo */
 #form-cv .btn-upload span::before {
     content: "📄 ";
     margin-right: 8px;
 }
 
-/* Contenedor botones */
+    /* Contenedor botones */
 #form-cv .d-flex {
     display: flex;
     justify-content: space-between;
@@ -1041,7 +986,7 @@ header {
     margin-top: 20px;
 }
 
-/* MENSAJE DE ÉXITO */
+    /* MENSAJE DE ÉXITO */
 #mensaje-cv {
     font-weight: 600;
     color: green;
@@ -1052,13 +997,13 @@ header {
     animation: fadeInOut 4s ease forwards;
 }
 
-/* Animación fade */
+    /* Animación fade */
 @keyframes fadeInOut {
     0%, 80% { opacity: 0; }
     10%, 70% { opacity: 1; }
 }
 
-/* RESPONSIVE */
+    /*RESPONSIVE CARGA TU CV*/
 @media (max-width: 768px) {
     #form-cv {
         padding: 20px;

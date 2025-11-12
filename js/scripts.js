@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // --- 🔹 SECCIONES ---
+    //SECCIONES
     const secciones = {
         inicio: document.getElementById("seccion-inicio"),
         menu: document.getElementById("seccion-menu"),
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mostrar inicio por defecto
     mostrarSeccion("inicio");
 
-    // --- 🔹 NAV BOTONES ---
+    //NAVEGADOR BOTONES
     document.querySelectorAll(".nav-btn").forEach(btn => {
         btn.addEventListener("click", e => {
             e.preventDefault();
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => { mensajeCV.style.display = "none"; }, 4000);
     });
 
-    // --- 🔹 CARRUSEL TIENDA ---
+    //CARRUSEL TIENDA
     const track = document.getElementById("tienda-track");
     const prevBtn = document.getElementById("tienda-prev");
     const nextBtn = document.getElementById("tienda-next");
@@ -117,13 +117,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// --- CARRUSEL TIENDA ---
+//CARRUSEL TIENDA
 const track = document.getElementById("tienda-track");
 const prevBtn = document.getElementById("tienda-prev");
 const nextBtn = document.getElementById("tienda-next");
 const totalProductos = 12;
 
-// Generar productos dinámicamente
+//Generar productos dinámicamente
 for (let i = 1; i <= totalProductos; i++) {
     const div = document.createElement("div");
     div.classList.add("tienda-producto");
@@ -137,12 +137,12 @@ for (let i = 1; i <= totalProductos; i++) {
 
 let posicion = 0;
 
-// Determina cuántos productos se ven según la pantalla
+//Determina cuántos productos se ven según la pantalla
 function productosVisibles() {
     return window.innerWidth <= 768 ? 2 : 4;
 }
 
-// Actualiza la posición del carrusel
+//Actualiza la posición del carrusel
 function actualizarCarrusel() {
     if(track.children.length === 0) return;
     const visible = productosVisibles();
@@ -153,7 +153,7 @@ function actualizarCarrusel() {
     track.style.transition = "transform 0.4s ease";
 }
 
-// Botón siguiente
+//Botón siguiente
 nextBtn.addEventListener("click", () => {
     const visible = productosVisibles();
     const maxPos = track.children.length - visible;
@@ -161,7 +161,7 @@ nextBtn.addEventListener("click", () => {
     actualizarCarrusel();
 });
 
-// Botón anterior
+//Botón anterior
 prevBtn.addEventListener("click", () => {
     const visible = productosVisibles();
     const maxPos = track.children.length - visible;
@@ -169,7 +169,7 @@ prevBtn.addEventListener("click", () => {
     actualizarCarrusel();
 });
 
-// Ajusta el carrusel al cambiar el tamaño de pantalla
+//Ajusta el carrusel al cambiar el tamaño de pantalla
 window.addEventListener("resize", () => {
     posicion = 0;
     actualizarCarrusel();
