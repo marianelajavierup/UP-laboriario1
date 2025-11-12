@@ -180,8 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
     /*Mostrar solo INICIO al cargar*/
     mostrarSeccion("seccion-inicio");
   
-  
-    /*FORMULARIO DE RESERVA*/
+
     const pasos = [
       document.getElementById("reserva-paso1"),
       document.getElementById("reserva-paso2"),
@@ -208,4 +207,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mostrar el primer paso al cargar
     mostrarPaso(0);
   });
+
+  // Botón "Volver al Inicio" en el Paso 4
+document.getElementById("volverInicio").addEventListener("click", function() {
+    // Oculta la sección de reserva
+    document.getElementById("seccion-reserva").style.display = "none";
+  
+    // Muestra la sección de inicio
+    document.getElementById("seccion-inicio").style.display = "block";
+  
+    // Hace scroll hacia arriba para que se vea el inicio
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  
   

@@ -575,118 +575,155 @@ header {
 }
 
 /* RESERVAS */
-.reserva-form {
-    max-width: 500px;
-    margin: 0 auto;
-    background: var(--botton);
-    padding: 20px;
-    border-radius: 15px;
-    color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  }
-  
-  .reserva-form label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-  }
-  
-  .reserva-form select,
-  .reserva-form input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    margin-top: 8px;
-    font-size: 1rem;
-  }
-  
-  .reserva-botones {
-    margin-top: 25px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .reserva-botones button {
-    background: var(--header2);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .reserva-botones button:hover {
-    background: var(--header1);
-  }
-  
-  /* Ocultar pasos */
-  .reserva-paso {
-    display: none;
-    animation: fade 0.3s ease;
-  }
-  
-  .reserva-paso.activo {
-    display: block;
-  }
-  
-  /* Animación */
-  @keyframes fade {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .reserva-form {
-      width: 90%;
-      padding: 15px;
-    }
-  
-    .reserva-botones {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .reserva-botones button {
-      width: 100%;
-    }
-  }
-  
-  /* FORMULARIO DE RESERVA */
-.reserva-paso {
-    max-width: 600px;
-    margin: 0 auto;
-    background: var(--botton);
-    color: white;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-.reserva-paso input, 
-.reserva-paso select {
-    margin-top: 10px;
-}
-
-#btn-volver, #btn-siguiente {
-    border-radius: 10px;
-    padding: 8px 20px;
-    transition: all 0.3s ease;
-}
-
-#btn-volver:hover {
-    background-color: var(--header2);
-    color: white;
-}
-
-#btn-siguiente:hover {
-    background-color: var(--header2);
-}
-
+/* 🔸 CONTENEDOR GENERAL DEL FORMULARIO */
 #seccion-reserva {
+    background-color: #fff8f0; /* beige claro */
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 3rem auto;
     position: relative;
-    z-index: 10; /* se asegura de que quede por encima */
-    background-color: white; /* evita que se vea lo de abajo */
+    z-index: 10;
   }
+  
+  /* 🔸 TÍTULO */
+  #seccion-reserva h2 {
+    text-align: center;
+    color: #e07a2c; /* naranja principal */
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  /* 🔸 CAMPOS DEL FORMULARIO */
+  #seccion-reserva form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #seccion-reserva label {
+    font-weight: 500;
+    color: #444;
+  }
+  
+  #seccion-reserva input,
+  #seccion-reserva select,
+  #seccion-reserva textarea {
+    padding: 0.8rem;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* 🔸 Efecto al pasar el mouse sobre los campos */
+  #seccion-reserva input:hover,
+  #seccion-reserva select:hover,
+  #seccion-reserva textarea:hover {
+    border-color: #e07a2c;
+    background-color: #fff1e6;
+  }
+  
+  /* 🔸 BOTÓN PRINCIPAL */
+  #seccion-reserva button {
+    background-color: #e07a2c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  /* 🔸 EFECTO HOVER DEL BOTÓN */
+  #seccion-reserva button:hover {
+    background-color: #ff9c4a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(224, 122, 44, 0.4);
+  }
+  
+  /* 🔸 MENSAJE DE CONFIRMACIÓN (paso 4) */
+  #mensaje-confirmacion {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2d6a4f;
+    background-color: #e6ffea;
+    border: 1px solid #b7f2c2;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    display: none; /* se muestra solo cuando se confirma */
+  }
+  
+  /*AJUSTE DE ALINEACIÓN DEL PASO 1*/
+#seccion-reserva .reserva-paso .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  #seccion-reserva .reserva-paso .col-md-5 {
+    flex: 1 1 300px; 
+    max-width: 400px;
+  }
+  
+  #seccion-reserva select.form-select {
+    height: 50px;
+    border-radius: 12px;
+    border: 2px solid #e8e8e8;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  #seccion-reserva select.form-select:hover {
+    border-color: #ff7f00;
+    box-shadow: 0 0 6px rgba(255, 127, 0, 0.3);
+  }
+  
+/*SELECT FECHA Y HORA (PASO 2)*/
+#seccion-reserva select.form-select {
+    height: 50px;
+    border-radius: 12px;
+    border: 2px solid #e8e8e8;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+  }
+  
+  #seccion-reserva select.form-select:hover {
+    border-color: #ff7f00;
+    box-shadow: 0 0 6px rgba(255, 127, 0, 0.3);
+  }
+  
+  #seccion-reserva select.form-select:focus {
+    border-color: #ff7f00;
+    box-shadow: 0 0 6px rgba(255, 127, 0, 0.4);
+    outline: none;
+  }
+
+  #volverInicio {
+    background-color: #ff7f00;
+    border: none;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  #volverInicio:hover {
+    background-color: #e76e00;
+    transform: scale(1.05);
+  }
+  
   
