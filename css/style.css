@@ -501,7 +501,7 @@ header {
 }
 
 
-/* BOTÓN DESCARGAR MENÚ PDF      */
+/*BOTÓN DESCARGAR MENÚ PDF*/
 
 .btn-descargar-menu {
     display: inline-block;
@@ -558,7 +558,7 @@ header {
 
 /* Cada producto dentro del carrusel */
 .tienda-producto {
-    min-width: calc(25% - 15px); /* ✅ Vemos 4 elementos */
+    min-width: calc(25% - 15px); 
     max-width: calc(25% - 15px);
     background: white;
     border-radius: 10px;
@@ -569,7 +569,124 @@ header {
 
 .tienda-producto img {
     width: 100%;
-    height: 180px;        /* ✅ Todas las imágenes iguales */
-    object-fit: cover;    /* ✅ Recorte estético */
+    height: 180px; 
+    object-fit: cover; 
     border-radius: 10px;
 }
+
+/* RESERVAS */
+.reserva-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: var(--botton);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  .reserva-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  .reserva-form select,
+  .reserva-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+  
+  .reserva-botones {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .reserva-botones button {
+    background: var(--header2);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .reserva-botones button:hover {
+    background: var(--header1);
+  }
+  
+  /* Ocultar pasos */
+  .reserva-paso {
+    display: none;
+    animation: fade 0.3s ease;
+  }
+  
+  .reserva-paso.activo {
+    display: block;
+  }
+  
+  /* Animación */
+  @keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .reserva-form {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .reserva-botones {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .reserva-botones button {
+      width: 100%;
+    }
+  }
+  
+  /* FORMULARIO DE RESERVA */
+.reserva-paso {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--botton);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.reserva-paso input, 
+.reserva-paso select {
+    margin-top: 10px;
+}
+
+#btn-volver, #btn-siguiente {
+    border-radius: 10px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+#btn-volver:hover {
+    background-color: var(--header2);
+    color: white;
+}
+
+#btn-siguiente:hover {
+    background-color: var(--header2);
+}
+
+#seccion-reserva {
+    position: relative;
+    z-index: 10; /* se asegura de que quede por encima */
+    background-color: white; /* evita que se vea lo de abajo */
+  }
+  

@@ -1,5 +1,4 @@
 
-
     document.addEventListener("DOMContentLoaded", function () {
     
         const inicioSection = document.getElementById("seccion-inicio");
@@ -152,3 +151,61 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+/* FORMULARIO RESERVAS */
+document.addEventListener("DOMContentLoaded", function () {
+
+    /*NAVEGACIÓN PRINCIPAL*/
+    const seccionInicio = document.getElementById("seccion-inicio");
+    const seccionMenu = document.getElementById("seccion-menu");
+    const seccionReserva = document.getElementById("seccion-reserva");
+    const secciones = [seccionInicio, seccionMenu, seccionReserva];
+  
+    function mostrarSeccion(id) {
+      secciones.forEach(sec => sec.style.display = "none");
+      document.getElementById(id).style.display = "block";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  
+    document.querySelectorAll(".nav-btn").forEach(btn => {
+      btn.addEventListener("click", e => {
+        e.preventDefault();
+        const destino = btn.getAttribute("data-section");
+        if (destino === "inicio") mostrarSeccion("seccion-inicio");
+        if (destino === "menu") mostrarSeccion("seccion-menu");
+        if (destino === "reserva") mostrarSeccion("seccion-reserva");
+      });
+    });
+  
+    /*Mostrar solo INICIO al cargar*/
+    mostrarSeccion("seccion-inicio");
+  
+  
+    /*FORMULARIO DE RESERVA*/
+    const pasos = [
+      document.getElementById("reserva-paso1"),
+      document.getElementById("reserva-paso2"),
+      document.getElementById("reserva-paso3"),
+      document.getElementById("reserva-paso4")
+    ];
+  
+    function mostrarPaso(n) {
+      pasos.forEach((p, i) => p.style.display = (i === n) ? "block" : "none");
+    }
+  
+    // Paso 1 → Paso 2
+    document.getElementById("btnPaso1").addEventListener("click", () => mostrarPaso(1));
+    document.getElementById("volver1").addEventListener("click", () => mostrarPaso(0));
+  
+    // Paso 2 → Paso 3
+    document.getElementById("btnPaso2").addEventListener("click", () => mostrarPaso(2));
+    document.getElementById("volver2").addEventListener("click", () => mostrarPaso(1));
+  
+    // Paso 3 → Confirmación (Paso 4)
+    document.getElementById("btnPaso3").addEventListener("click", () => mostrarPaso(3));
+    document.getElementById("volver3").addEventListener("click", () => mostrarPaso(2));
+  
+    // Mostrar el primer paso al cargar
+    mostrarPaso(0);
+  });
+  
