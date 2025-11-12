@@ -727,95 +727,86 @@ header {
   }
 
 /*SECCIÓN DELIVERY*/
-/*ESTILOS SECCIÓN DELIVERY (alineado al estilo de Reserva) */
 #seccion-delivery {
-    background-color: #fff8f1; /* fondo claro cálido */
+    background-color: #fff8f1;
     padding: 60px 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-top: 3px solid #f9a43f; /* línea naranja superior */
-  }
-  
-  .delivery-container {
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 40px;
+}
+
+.delivery-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 40px;
     max-width: 900px;
     width: 100%;
-    gap: 40px;
-  }
-  
-  /*Texto centrado */
-  .delivery-text {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.delivery-text {
     flex: 1 1 350px;
-    text-align: center;
-  }
-  
-  .delivery-text h3 {
+    text-align: left; /* alinea a la izquierda dentro del contenedor */
+}
+
+.delivery-text h3 {
     color: #e57200;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 15px;
-  }
-  
-  .delivery-text p {
+}
+
+.delivery-text p {
     color: #555;
     font-size: 1.1rem;
-    margin-bottom: 25px;
     line-height: 1.6;
-  }
-  
-  /*Botón PedidosYa*/
-  .delivery-btn {
-    width: 180px;
+    margin-bottom: 25px;
+}
+
+.delivery-btn {
+    display: inline-block;
+    background-color: #e57200;
+    color: #fff;
+    padding: 12px 28px;
     border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
-  }
-  
-  .delivery-btn:hover {
-    transform: scale(1.05);
-    border-color: #f9a43f;
-    box-shadow: 0 0 15px rgba(249, 164, 63, 0.4);
-  }
-  
-  /*Imagen del repartidor*/
-  .delivery-img img {
-    max-width: 350px;
+}
+
+.delivery-btn:hover {
+    background-color: #ff9c4a;
+    transform: translateY(-2px);
+}
+
+/* Imagen del repartidor */
+.delivery-img img {
     width: 100%;
+    max-width: 350px;
     border-radius: 16px;
-    transition: transform 0.3s ease;
-  }
-  
-  .delivery-img img:hover {
-    transform: scale(1.03);
-  }
-  
-  /*Responsive*/
-  @media (max-width: 768px) {
+}
+
+/* Responsive */
+@media (max-width: 768px) {
     .delivery-container {
-      flex-direction: column;
-      text-align: center;
-      padding: 30px 20px;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
     }
-  
+
     .delivery-text {
-      text-align: center;
+        text-align: center;
     }
-  
+
     .delivery-btn {
-      width: 150px;
+        margin: 0 auto;
     }
-  
+
     .delivery-img img {
-      max-width: 280px;
+        max-width: 280px;
     }
-  }
+}
+
   
