@@ -1,508 +1,169 @@
+    <!--JAVA SCRIPT-->
+    <script src="js/scripts.js"></script>
+
+
+<!--NUEVO-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabores Libres SIN TACC</title>
+    <title>Sabores Libres – Reserva</title>
 
-    <!--CSS-->
+    <!-- LINK A TU CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!--BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!--JAVA SCRIPT-->
-    <script src="js/scripts.js"></script>
-
+    <!-- Tipografía secundaria desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
+<body>
 
-<body class="bg1"> <!-- Fondo beige general -->
-
-<!--HEADER-->
-<header class="header-principal bg1">
-
-    <div class="container d-flex justify-content-between align-items-center py-3 position-relative">
-
-        <!--LOGO TENEDOR-->
-        <img src="img/tenedor.png" alt="Tenedor" class="tenedor-header">
-
-        <!--ICONOS: TIENDA + USUARIO-->
-        <div class="header-opciones d-flex align-items-center gap-4">
-            <a href="#"><img src="img/tienda.png" alt="Tienda" class="icono-header"></a>
-            <a href="#"><img src="img/usuario.png" alt="Usuario" class="icono-header"></a>
-        </div>
-
-    </div>
-
-
-    <!--BARRA DE NAVEGACIÓN NARANJA -->
-    <nav class="navbar navbar-expand-lg bg2">
-        <div class="container">
-  
-        <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navBarPrincipal">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse justify-content-center" id="navBarPrincipal">
-            <ul class="navbar-nav gap-4 text-center">
-            <li class="nav-item"><a class="nav-link text-light nav-btn" data-section="inicio" href="#">INICIO</a></li>
-            <li class="nav-item"><a class="nav-link text-light nav-btn" data-section="menu" href="#">MENÚ</a></li>
-            <li class="nav-item"><a class="nav-link text-light nav-btn" data-section="promo" href="#">PROMOCIÓN</a></li>
-            <li class="nav-item"><a class="nav-link text-light nav-btn" data-section="delivery" href="#">DELIVERY</a></li>
-            <li class="nav-item"><a class="nav-link text-light nav-btn" data-section="reserva" href="#">RESERVA</a></li>
+    <!-- ==============================
+         HEADER + MENU
+    =============================== -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">INICIO</a></li>
+                <li><a href="#">MENÚ</a></li>
+                <li><a href="#">PROMOCIÓN</a></li>
+                <li><a href="#">DELIVERY</a></li>
+                <li><a href="#">RESERVA</a></li>
             </ul>
-        </div>
-  
-        </div>
-    </nav>
-   
-    
-    <!-- Banner superior / SLIDER -->
-    <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+        </nav>
+    </header>
 
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000">
-                <img src="img/banner1.jpg" class="d-block w-100" alt="">
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="img/banner2.jpg" class="d-block w-100" alt="">
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="img/banner3.jpg" class="d-block w-100" alt="">
-            </div>
+
+    <!-- ==============================
+         FORMULARIO DE RESERVA
+    =============================== -->
+    <section class="reserva-container">
+
+        <h2>Hacé tu Reserva</h2>
+
+        <p>
+            “Reservá tu mesa en Sabores Libres y descubrí el verdadero placer de comer sin preocupaciones.”
+            <br><br>
+            <strong>Cena</strong> para <strong>2 personas</strong> el 
+            <strong>Sábado 4 de Octubre 20:30hs.</strong>
+        </p>
+
+        <div>
+            <label>Nombre completo:</label><br>
+            <input type="text" placeholder="Tu nombre">
         </div>
 
+        <div>
+            <label>Teléfono de contacto:</label><br>
+            <input type="tel" placeholder="Tu número">
+        </div>
+
+        <div style="margin-top: 2rem; display:flex; justify-content:space-between; max-width:450px; margin-inline:auto;">
+            <button class="btn">VOLVER</button>
+            <button class="btn">SIGUIENTE</button>
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         TIENDA – CARDS
+    =============================== -->
+    <section class="tienda-wrapper">
+
+        <!-- Flecha izquierda -->
+        <div class="arrow">⟵</div>
+
+        <!-- Producto 1 -->
+        <div class="card">
+            <img src="img/producto1.jpg" alt="Producto 1">
+            <h4>Lorem ipsum</h4>
+            <p>$1000</p>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="card">
+            <img src="img/producto2.jpg" alt="Producto 2">
+            <h4>Lorem ipsum</h4>
+            <p>$1000</p>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="card">
+            <img src="img/producto3.jpg" alt="Producto 3">
+            <h4>Lorem ipsum</h4>
+            <p>$1000</p>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="card">
+            <img src="img/producto4.jpg" alt="Producto 4">
+            <h4>Lorem ipsum</h4>
+            <p>$1000</p>
+        </div>
+
+        <!-- Flecha derecha -->
+        <div class="arrow">⟶</div>
+
+    </section>
+
+
+    <!-- ==============================
+         BARRA DE NOVEDADES
+    =============================== -->
+    <div class="news-bar">Enterate de todas nuestras novedades</div>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+    <footer>
+
+        <!-- Logo -->
+        <div>
+            <img class="logo-footer" src="img/logo-sabores.png" alt="Logo Sabores Libres">
+        </div>
+
+        <!-- Menú -->
+        <div>
+            <p><strong>¿Quiénes Somos?</strong></p>
+            <p>Cargá tu CV</p>
+            <p>Menú</p>
+            <p>Promociones</p>
+        </div>
+
+        <!-- Información -->
+        <div>
+            <p><strong>TIENDA</strong></p>
+            <p>Delivery</p>
+            <p>Reservas: +54 341 5111111</p>
+        </div>
+
+        <!-- Horarios + Ubicación -->
+        <div>
+            <p><strong>HORARIO</strong><br>Lunes a Domingo de 8 a 23hs</p>
+            <p><strong>UBICACIÓN</strong><br>Corrientes 5677, Rosario</p>
+        </div>
+
+        <!-- Redes -->
+        <div class="social">
+            <span>🅕</span>
+            <span>✕</span>
+            <span>📷</span>
+        </div>
+
+    </footer>
+
+
+    <!-- ==============================
+         BOTÓN WHATSAPP
+    =============================== -->
+    <div class="whatsapp-btn">
+        <img src="img/whatsapp.svg" alt="WhatsApp" width="36">
     </div>
-
-    <!--TEXTO FIJO SOBRE EL SLIDER-->
-        <div class="slider-text">
-            <h1>Sabores Libres</h1>
-            <p>Descubrí el verdadero placer de comer sin preocupaciones</p>
-        </div>
-
-
-</header>
-
-
-</body>
-<!--ÁREA DINÁMICA (FONDO BEIGE) -->
-    <!--SECCIÓN MENÚ TIPO REVISTA-->
-<section id="seccion-menu" class="bg1 py-5" style="display:none;">
-
-    <div class="container text-center">
-
-        <h2 class="mb-4">MENÚ</h2>
-
-        <!-- Botón para descargar PDF -->
-        <a href="pdf/menu.pdf" download class="btn-descargar-menu">
-            📄 Descargar Menú (PDF)
-        </a>
-        
-
-        <!-- CONTENEDOR TIPO REVISTA -->
-        <div class="menu-revista d-flex justify-content-center align-items-center gap-3">
-
-            <!-- Flecha izquierda -->
-            <button class="menu-arrow" id="menu-prev">❮</button>
-
-            <!-- Páginas -->
-            <div class="menu-pages d-flex">
-
-                <img id="menu-pag1" src="img/menu1.png" class="menu-img">
-                <img id="menu-pag2" src="img/menu2.png" class="menu-img">
-
-            </div>
-
-            <!-- Flecha derecha -->
-            <button class="menu-arrow" id="menu-next">❯</button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!--SECCIÓN INICIO-->
-<section id="seccion-inicio" class="bg1 py-5">
-
-    <!--CONCEPTO SABORES LIBRES-->
-    <div class="contenido-dinamico mb-5 container text-center">
-        <h2 class="inicio-title">
-            El presente proyecto consiste en el diseño y desarrollo de un sitio web para un restaurante ficticio, denominado Sabores Libres.
-        </h2>
-        <h3 class="inicio-subtitle">
-            La propuesta surge como una idea de negocio orientada a personas celíacas, pero abierta a todo público, con el objetivo de ofrecer un espacio gastronómico que garantice comida 100% libre de gluten y de preocupaciones ante la contaminación cruzada.
-        </h3>
-    </div>
-
-    <!--MISIÓN Y VISIÓN-->
-    <div class="mision-vision container mt-5">
-        <div class="row justify-content-center g-4">
-
-            <!--Misión-->
-            <div class="col-md-6 col-12">
-                <div class="mv-box">
-                    <h2 class="mv-title">MISIÓN</h2>
-                    <h3 class="mv-text">
-                        Brindar a la comunidad celíaca y no celíaca una experiencia gastronómica única,
-                        ofreciendo un menú íntegramente sin TACC, elaborado en el momento, con ingredientes
-                        frescos, seguros y sabrosos, en un espacio confortable donde todos puedan disfrutar
-                        sin restricciones ni preocupaciones.
-                    </h3>
-                </div>
-            </div>
-
-            <!--Visión-->
-            <div class="col-md-6 col-12">
-                <div class="mv-box">
-                    <h2 class="mv-title">VISIÓN</h2>
-                    <h3 class="mv-text">
-                        Convertirse en un referente en gastronomía libre de gluten, tanto a nivel presencial
-                        como digital, ofreciendo un restaurante y tienda online que combinen innovación,
-                        confianza y disfrute, contribuyendo a una vida más saludable y libre de barreras alimenticias.
-                    </h3>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</section>
-
-
-<!-- SECCIÓN RESERVA -->
-<section id="seccion-reserva" class="bg1 py-5" style="display:none;">
-    <div class="container text-center">
-      <h2 class="mb-4">Hacé tu Reserva</h2>
-      <p>"Reservá tu mesa en Sabores Libres y descubrí el verdadero placer de comer sin preocupaciones."</p>
-  
-      <form id="form-reserva">
-        <!-- Paso 1 -->
-        <div class="reserva-paso" id="reserva-paso1">
-          <div class="row justify-content-center g-3">
-            <div class="col-md-5">
-              <label>Desayuno / Almuerzo / Merienda / Cena:</label>
-              <select id="tipoReserva" class="form-select">
-                <option value="">Elegí tu opción</option>
-                <option>Desayuno</option>
-                <option>Almuerzo</option>
-                <option>Merienda</option>
-                <option>Cena</option>
-              </select>
-            </div>
-  
-            <div class="col-md-5">
-              <label>Cantidad de personas:</label>
-              <select id="personas" class="form-select">
-                <option value="">Seleccionar</option>
-                <option>1</option><option>2</option><option>3</option>
-                <option>4</option><option>5</option><option>6</option>
-              </select>
-            </div>
-          </div>
-  
-          <button type="button" id="btnPaso1" class="btn btn-primary mt-4">Siguiente</button>
-        </div>
-  
-        <!-- Paso 2 -->
-        <div class="reserva-paso" id="reserva-paso2" style="display:none;">
-          <label>Seleccioná fecha y hora:</label>
-          <div class="row justify-content-center g-3 mt-3">
-            <div class="col-md-5">
-              <input type="date" class="form-control">
-            </div>
-            <div class="col-md-5">
-                <label for="horaReserva" class="form-label">Horario:</label>
-                <select id="horaReserva" class="form-select">
-                  <option value="">Seleccioná horario</option>
-                  <option>09:00</option>
-                  <option>09:30</option>
-                  <option>10:00</option>
-                  <option>10:30</option>
-                  <option>11:00</option>
-                  <option>11:30</option>
-                  <option>12:00</option>
-                  <option>12:30</option>
-                  <option>13:00</option>
-                  <option>13:30</option>
-                  <option>14:00</option>
-                  <option>14:30</option>
-                  <option>15:00</option>
-                  <option>15:30</option>
-                  <option>16:00</option>
-                  <option>16:30</option>
-                  <option>17:00</option>
-                  <option>17:30</option>
-                  <option>18:00</option>
-                  <option>18:30</option>
-                  <option>19:00</option>
-                  <option>19:30</option>
-                  <option>20:00</option>
-                  <option>20:30</option>
-                  <option>21:00</option>
-                  <option>21:30</option>
-                  <option>22:00</option>
-                </select>
-              </div>
-               
-          </div>
-          <div class="mt-4">
-            <button type="button" class="btn btn-secondary" id="volver1">Volver</button>
-            <button type="button" class="btn btn-primary" id="btnPaso2">Siguiente</button>
-          </div>
-        </div>
-  
-        <!-- Paso 3 -->
-        <div class="reserva-paso" id="reserva-paso3" style="display:none;">
-          <div class="row justify-content-center g-3">
-            <div class="col-md-5">
-              <input type="text" class="form-control" placeholder="Nombre Completo">
-            </div>
-            <div class="col-md-5">
-              <input type="tel" class="form-control" placeholder="Teléfono de contacto">
-            </div>
-          </div>
-          <div class="mt-4">
-            <button type="button" class="btn btn-secondary" id="volver2">Volver</button>
-            <button type="button" class="btn btn-primary" id="btnPaso3">Siguiente</button>
-          </div>
-        </div>
-  
-        <!-- Paso 4 (Confirmación) -->
-        <!-- Paso 4 (Confirmación) -->
-            <div class="reserva-paso" id="reserva-paso4" style="display:none;">
-                <h3>✅ ¡Tu reserva ha sido confirmada!</h3>
-                <p>Nos comunicaremos contigo para finalizar los detalles.</p>
-                <button type="button" class="btn btn-primary" id="volverInicio">Volver al Inicio</button>
-            </div>
-    </form>
-    </div>
-</section>
-
-
-<!-- SECCIÓN DELIVERY -->
-<section id="seccion-delivery" class="bg1 py-5" style="display:none;">
-    <div class="container delivery-container d-flex align-items-center justify-content-between flex-wrap">
-  
-      <!-- Columna Izquierda -->
-      <div class="delivery-text text-center text-lg-start">
-        <h3 class="mb-3">¡Hacé tu Pedido!</h3>
-        <p class="mb-4">Encontrá a <strong>Sabores Libres</strong> en <strong>Pedidos Ya</strong> y disfrutá nuestros sabores sin gluten donde quieras.</p>
-  
-        <!-- 🔗 Botón que redirige a la página oficial de Pedidos Ya -->
-        <a href="https://www.pedidosya.com.ar/" target="_blank" rel="noopener noreferrer">
-          <img src="img/pedidoya.jpg" alt="Pedido Ya" class="delivery-btn">
-        </a>
-      </div>
-  
-      <!-- Columna Derecha -->
-      <div class="delivery-img text-center mt-4 mt-lg-0">
-        <img src="img/delivery.png" alt="Repartidor Sabores Libres" class="img-fluid" style="max-width: 350px;">
-      </div>
-  
-    </div>
-  </section>  
-  
-<!--PROMOCION-->
-<section id="seccion-promocion">
-    <div class="promocion-container">
-      <div class="promocion-text">
-        <h2>Medios de Pago Habilitados</h2>
-        <p>Consulta por Beneficios y Promociones Bancarias</p>
-        <a href="#" class="promocion-btn">Ver Promociones</a>
-      </div>
-      <div class="promocion-img">
-        <img src="img/promocion.png" alt="Promociones Bancarias">
-      </div>
-    </div>
-</section>
-  
-   
-</section>
-
-<!--LÍNEA DIVISORIA-->
-<div class="seccion-divider"></div>
-
-<!--SECCIÓN TIENDA-->
-<section id="seccion-tienda" class="bg1 py-5">
-
-    <div class="container text-center">
-
-        <h2 class="mb-4">TIENDA</h2>
-
-        <!-- CARRUSEL -->
-        <div class="tienda-wrapper">
-
-            <button class="tienda-arrow" id="tienda-prev">❮</button>
-
-            <!-- Ventana del carrusel -->
-            <div class="tienda-viewport">
-                <div class="tienda-track" id="tienda-track">
-                    <!-- JS insertará los productos aquí -->
-                </div>
-            </div>
-
-            <button class="tienda-arrow" id="tienda-next">❯</button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--NEWSLETTER-->
-        <section class="newsletter mt-5">
-            <h3>Entérate de todas nuestras novedades</h3>
-            <div class="mt-3">
-                <input type="text" placeholder="Ingresá tu email">
-                <button>Enviar</button>
-            </div>
-        </section>
-
-        <!-- Reseñas -->
-        <section class="resenas container">
-            <div class="row g-4">
-
-                <div class="col-md-3">
-                    <div class="resena-box">
-                        <h4>Reseña 1</h4>
-                        <p>Lorem ipsum dolor sit amet...</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="resena-box">
-                        <h4>Reseña 2</h4>
-                        <p>Lorem ipsum dolor sit amet...</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="resena-box">
-                        <h4>Reseña 3</h4>
-                        <p>Lorem ipsum dolor sit amet...</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="resena-box">
-                        <h4>Reseña 4</h4>
-                        <p>Lorem ipsum dolor sit amet...</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-
-<!-- SECCIÓN CARGA TU CV -->
-<section id="seccion-cv" class="bg1 py-5" style="display:none;">
-    <div class="container">
-        <h2 class="text-center mb-4">Cargar tu CV</h2>
-        <p class="text-center mb-4">¡Queremos conocerte! Subí tu currículum en formato PDF y nos pondremos en contacto.</p>
-
-        <form id="form-cv" class="mx-auto" style="max-width:600px;" enctype="multipart/form-data">
-            <!-- Nombre -->
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre Completo</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-            </div>
-
-            <!-- Email -->
-            <div class="mb-3">
-                <label for="email" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
-            </div>
-
-            <!-- Teléfono -->
-            <div class="mb-3">
-                <label for="telefono" class="form-label">Teléfono</label>
-                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="(011) 1234-5678" required>
-            </div>
-
-            <!-- Archivo PDF -->
-            <div class="mb-4">
-                <label for="archivo" class="form-label">Subí tu CV (PDF)</label>
-                <input type="file" class="form-control" id="archivo" name="archivo" accept=".pdf" required>
-            </div>
-
-            <!-- Botones -->
-            <div class="d-flex justify-content-between">
-                <label class="btn btn-secondary mb-0">
-                    Cargar Archivo
-                    <input type="file" id="archivo-btn" name="archivo-btn" accept=".pdf" style="display:none;">
-                </label>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </div>
-        </form>
-
-        <!-- Mensaje de confirmación -->
-        <div id="mensaje-cv" class="mt-3 text-center text-success" style="display:none;">
-            ✅ ¡Tu CV ha sido enviado con éxito!
-        </div>
-    </div>
-</section>
-
-
-<!--FOOTER-->
-<footer class="footer bg3 text-light pt-5 pb-3">
-    <div class="container">
-        <div class="row gy-4">
-
-            <!--LOGO-->
-            <div class="col-md-3 text-center text-md-start">
-                <img src="img/logo.png" class="footer-logo mb-3" alt="Logo Sabores Libres">
-            </div>
-
-            <!--MENÚ-->
-            <div class="col-md-3">
-                <h5 class="footer-title">Explorar</h5>
-                <ul class="footer-links">
-                    <li><a href="#" class="nav-btn" data-section="inicio">¿Quiénes somos?</a></li>
-                    <li><a href="#" onclick="mostrarSeccion('cv')">Cargar tu CV</a></li>
-
-                    <li><a href="#" class="nav-btn" data-section="menu">Menú</a></li>
-                    <li><a href="#" class="nav-btn" data-section="promo">Promociones</a></li>
-                    <li><a href="#" class="nav-btn" data-section="delivery">Delivery</a></li>
-                    <li><a href="#" class="nav-btn" data-section="reserva">Reserva</a></li>
-                </ul>
-            </div>
-
-            <!--REDES-->
-            <div class="col-md-3 text-center">
-                <h5 class="footer-title">Seguinos</h5>
-                <div class="footer-redes mt-2">
-                    <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
-                </div>
-            </div>
-
-            <!--HORARIOS-->
-            <div class="col-md-3">
-                <h5 class="footer-title">Contacto</h5>
-                <p><strong>Horario:</strong><br>Lunes a Domingos 8 a 23hs</p>
-                <p><strong>Ubicación:</strong><br>Corrientes 5677, Rosario</p>
-            </div>
-
-        </div>
-
-        <!--LÍNEA FINAL-->
-        <div class="text-center mt-4 pt-3 footer-copy">
-            © 2025 Sabores Libres — UNIVERSIDAD DE PALERMO — Laboratorio de Diseño I — Prof: Guido Varela Coletta — Alumna: Marianela Javier
-        </div>
-    </div>
-</footer>
-
-  
-  
-
-
-<!--BOOTSTRAP SCRIPT -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
+
