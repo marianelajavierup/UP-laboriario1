@@ -1,83 +1,178 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú · Sabores Libres</title>
+    <title>Sabores Libres SIN TACC</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/estilos.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="bg1"> <!-- Fondo beige general -->
 
-    <header class="main-header bg2">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="img/logo.png" alt="Sabores Libres">
-            </a>
-    
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">INICIO</a></li>
-                    <li><a href="menu.html">MENÚ</a></li>
-                    <li><a href="promocion.html">PROMOCIÓN</a></li>
-                    <li><a href="delivery.html">DELIVERY</a></li>
-                    <li><a href="reserva.html">RESERVA</a></li>
-                    <li><a href="tienda.html">TIENDA</a></li>
-                </ul>
-            </nav>
-    
-            <div class="header-icons">
-                <a href="#" class="icon-link">¡Regístrate!</a>
-                <a href="#" class="icon-user"><img src="img/user.png" alt="Usuario"></a>
-            </div>
-        </div>
-    </header>
-    
+<!--HEADER-->
+    <!--BARRA 1 LOGO + TIENDA + USUARIO -->
+<header class="header-principal bg1">
 
-<!-- SECCIÓN MENÚ -->
-<section class="container py-5">
-    <h1 class="text-center mb-4">Nuestro Menú</h1>
+    <div class="container d-flex justify-content-between align-items-center py-3 position-relative">
 
-    <div class="row g-4">
-        <div class="col-md-4">
-            <div class="card shadow">
-                <img src="img/plato1.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Plato 1</h5>
-                    <p class="card-text">Descripción breve del plato.</p>
-                </div>
-            </div>
+        <!--LOGO TENEDOR-->
+        <img src="img/tenedor.png" alt="Tenedor" class="tenedor-header">
+
+        <!--ICONOS: TIENDA + USUARIO-->
+        <div class="header-opciones d-flex align-items-center gap-4">
+            <a href="#"><img src="img/tienda.png" alt="Tienda" class="icono-header"></a>
+            <a href="#"><img src="img/usuario.png" alt="Usuario" class="icono-header"></a>
         </div>
 
-        <div class="col-md-4">
-            <div class="card shadow">
-                <img src="img/plato2.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Plato 2</h5>
-                    <p class="card-text">Descripción breve del plato.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card shadow">
-                <img src="img/plato3.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Plato 3</h5>
-                    <p class="card-text">Descripción breve del plato.</p>
-                </div>
-            </div>
-        </div>
     </div>
+
+
+    <!--BARRA DE NAVEGACIÓN NARANJA -->
+    <nav class="navbar navbar-expand-lg bg2">
+        <div class="container">
+  
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navBarPrincipal">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse justify-content-center" id="navBarPrincipal">
+            <ul class="navbar-nav gap-4 MS-auto text-center">
+            <li class="nav-item"><a class="nav-link text-light nav-btn" href="nosotros.html">NOSOTROS</a></li>
+            <li class="nav-item"><a class="nav-link text-light nav-btn" href="menu.html">MENÚ</a></li>
+            <li class="nav-item"><a class="nav-link text-light nav-btn" href="promocion.html">PROMOCIÓN</a></li>
+            <li class="nav-item"><a class="nav-link text-light nav-btn" href="delivery.html">DELIVERY</a></li>
+            <li class="nav-item"><a class="nav-link text-light nav-btn" href="reserva.html">RESERVA</a></li>
+            </ul>
+        </div>
+  
+        </div>
+    </nav>
+   
+    
+    <!-- Banner superior / SLIDER -->
+    <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="img/banner1.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/banner2.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/banner3.jpg" class="d-block w-100" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <!--TEXTO FIJO SOBRE EL SLIDER-->
+        <div class="slider-text">
+            <h1>Sabores Libres</h1>
+            <p>Descubrí el verdadero placer de comer sin preocupaciones</p>
+        </div>
+</header>
+
+<body>
+<!-- ✅ SECCIÓN MENÚ TIPO REVISTA -->
+<section id="seccion-menu" class="bg1 py-5" style="display:none;">
+
+    <div class="container text-center">
+
+        <h2 class="mb-4">MENÚ</h2>
+
+        <!-- Botón para descargar PDF -->
+        <a href="pdf/menu.pdf" download class="btn btn-primary mb-4"
+           style="background:#E4572E; border:none;">
+            Descargar Menú en PDF
+        </a>
+
+        <!-- CONTENEDOR TIPO REVISTA -->
+        <div class="menu-revista d-flex justify-content-center align-items-center gap-3">
+
+            <!-- Flecha izquierda -->
+            <button class="menu-arrow" id="menu-prev">❮</button>
+
+            <!-- Páginas -->
+            <div class="menu-pages d-flex">
+
+                <img id="menu-pag1" src="img/menu1.jpg" class="menu-img">
+                <img id="menu-pag2" src="img/menu2.jpg" class="menu-img">
+
+            </div>
+
+            <!-- Flecha derecha -->
+            <button class="menu-arrow" id="menu-next">❯</button>
+
+        </div>
+
+    </div>
+
 </section>
 
-<!-- FOOTER -->
-<footer class="text-center py-4 bg-dark text-light">
-    © 2025 · Sabores Libres
+</body>
+
+<!--FOOTER-->
+<footer class="footer bg3 text-light pt-5 pb-3">
+    <div class="container">
+        <div class="row gy-4">
+
+            <!--LOGO-->
+            <div class="col-md-3 text-center text-md-start">
+                <img src="img/logo.png" class="footer-logo mb-3" alt="Logo Sabores Libres">
+            </div>
+
+            <!--MENÚ-->
+            <div class="col-md-3">
+                <h5 class="footer-title">Explorar</h5>
+                <ul class="footer-links">
+                    <li><a href="#" class="nav-btn" data-section="inicio">Nosotros</a></li>
+                    <li><a href="#" class="nav-btn" data-section="menu">Menú</a></li>
+                    <li><a href="#" class="nav-btn" data-section="promo">Promociones</a></li>
+                    <li><a href="#" class="nav-btn" data-section="delivery">Delivery</a></li>
+                    <li><a href="#" class="nav-btn" data-section="reserva">Reserva</a></li>
+                </ul>
+            </div>
+
+            <!--REDES-->
+            <div class="col-md-3 text-center">
+                <h5 class="footer-title">Seguinos</h5>
+                <div class="footer-redes mt-2">
+                    <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+
+            <!--HORARIOS-->
+            <div class="col-md-3">
+                <h5 class="footer-title">Contacto</h5>
+                <p><strong>Horario:</strong><br>Lunes a Domingos 8 a 23hs</p>
+                <p><strong>Ubicación:</strong><br>Corrientes 5677, Rosario</p>
+            </div>
+
+        </div>
+
+        <!--LÍNEA FINAL-->
+        <div class="text-center mt-4 pt-3 footer-copy">
+            © 2025 Sabores Libres — UNIVERSIDAD DE PALERMO — Laboratorio de Diseño I — Prof: Guido Varela Coletta — Alumna: Marianela Javier
+        </div>
+    </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  
+
+
+<!--BOOTSTRAP SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+

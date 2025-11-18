@@ -434,89 +434,88 @@ header {
 
 
 /*ESTILOS REVISTA – MENÚ*/
-.menu-revista {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    margin-top: 30px;
-}
 
-.menu-img {
-    width: 350px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-}
-
-    /* Contenedor de páginas lado a lado */
-.menu-pages {
-    display: flex;
-    gap: 15px;
-}
-
-    /* Flechas */
-.menu-arrow {
-    background: var(--header2);
-    color: white;
-    border: none;
-    font-size: 2rem;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.25s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu-arrow:hover {
-    background: var(--botton);
-    transform: scale(1.1);
-}
-
-    /* RESPONSIVE REVISTA*/
-@media (max-width: 768px) {
-
-    .menu-img {
-        width: 150px;
-        height: 220px;
-        border-radius: 8px;
-    }
-
-    .menu-arrow {
-        width: 45px;
-        height: 45px;
-        font-size: 1.5rem;
-    }
-
-    .menu-pages {
-        gap: 8px;
-    }
-}
-
-
-/*BOTÓN DESCARGAR MENÚ PDF*/
-
-.btn-descargar-menu {
-    display: inline-block;
-    background: var(--header2);
-    color: white;
-    padding: 12px 28px;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    text-decoration: none;
+/* Botón descargar PDF */
+.btn-descargar-menu,
+.btn-descargar-menu:visited {
+    background-color: var(--botton);
+    color: var(--text2);
     font-weight: 600;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
 .btn-descargar-menu:hover {
-    background: var(--botton);
-    transform: translateY(-3px);
+    background-color: var(--header2);
+    color: white;
+    transform: scale(1.05);
 }
+
+/* Contenedor principal del carrusel */
+#revistaMenu {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilo de las imágenes del carrusel */
+#revistaMenu img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Flechas del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%); /* las hace blancas */
+}
+
+/* Fondo de indicadores */
+.carousel-indicators button {
+    background-color: var(--header2);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: var(--botton);
+}
+
+/* Ajustes de spacing */
+.menu-revista {
+    margin-top: 25px;
+}
+
+/* Título MENÚ */
+#seccion-menu h2 {
+    font-family: "Richie Brusher";
+    color: var(--header2);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    #revistaMenu img {
+        border-radius: 14px;
+    }
+
+    #seccion-menu h2 {
+        font-size: 2.4rem;
+    }
+
+    .btn-descargar-menu {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
 
 
 /* RESERVAS */

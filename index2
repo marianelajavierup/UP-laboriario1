@@ -2,6 +2,22 @@
     <script src="js/scripts.js"></script>
 
 
+    <div class="collapse navbar-collapse justify-content-center" id="navBarPrincipal">
+        <ul class="navbar-nav gap-4 MS-auto text-center">
+        <li class="nav-item"><a class="nav-link text-light nav-btn" href="nosotros.html">NOSOTROS</a></li>
+        <li class="nav-item"><a class="nav-link text-light nav-btn" href="menu.html">MENÚ</a></li>
+        <li class="nav-item"><a class="nav-link text-light nav-btn" href="promocion.html">PROMOCIÓN</a></li>
+        <li class="nav-item"><a class="nav-link text-light nav-btn" href="delivery.html">DELIVERY</a></li>
+        <li class="nav-item"><a class="nav-link text-light nav-btn" href="reserva.html">RESERVA</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
 <!--NUEVO-->
 
 <!DOCTYPE html>
