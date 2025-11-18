@@ -1,1020 +1,293 @@
-
-/*TIPOGRAFÍA PERSONALIZADA*/
-@font-face {
-    font-family: 'Richie Brusher';
-    src: url('../fonts/Richie Brusher.ttf') format('truetype');
-    font-display: swap;
+/* ------------------------------
+   RESET GENERAL
+-------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/*VARIABLES GLOBALES*/
-:root {
-    --section: #F5E9DD;
-    --header2: #E4572E;
-    --botton: #2E59A7;
-    --footer: #102345;
-    --text: #2C2C2C;
-    --text2: #FFFFFF;
-}
-
-/*FONDOS*/
-.bg1 { background: var(--section); }
-.bg2 { background: var(--header2); }
-.bg3 { background: var(--footer); }
-
-/*GLOBAL*/
 body {
-    background-color: var(--section);
-    color: var(--text);
-    font-family: 'Josefin Slab', serif;
-}
-
-
-/*HEADER*/
-header {
-    position: relative;
-}
-
-/*LOGO TENEDOR*/
-.tenedor-header {
-    width: 60px;
-}
-
-/*ICONOS: TIENDA + USUARIO*/
-.icono-header {
-    width: 32px;
-    transition: 0.3s;
-}
-
-.icono-header:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-}
-
-/*ENLACES DEL HEADER (si agregrego texto)*/
-.header-link {
-    text-decoration: none;
-    color: var(--text);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.header-link:hover {
-    color: var(--header2);
-}
-
-.header-opciones img {
-    width: 30px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.header-opciones img:hover {
-    transform: scale(1.12);
-    opacity: 0.85;
-}
-
-/*SLIDER- BANNER*/
-.carousel-item img {
-    width: 100%;
-    height: 60vh; 
-    max-height: 500px;
-    object-fit: cover;
-    filter: brightness(70%);
-}
-
-/*TEXTO FIJO SLIDER- BANNER*/
-.slider-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    text-align: center;
-    color: white;
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
-}
-
-.slider-text h1 {
-    font-family: 'Richie Brusher', cursive;
-    font-size: clamp(2.5rem, 8vw, 6rem);
-    font-weight: 800;
-}
-
-.slider-text p {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-}
-
-/*ÁREA DINÁMICA*/
-.content-area {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-/*TIENDA + PRODUCTOS*/
-    /*Contenedor*/
-    .tienda-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-    }
-    
-        /*Flechas*/
-    .tienda-arrow {
-        background: none;
-        border: none;
-        font-size: 45px;
-        cursor: pointer;
-        color: #E4572E;
-        transition: 0.2s;
-    }
-    .tienda-arrow:hover {
-        transform: scale(1.15);
-    }
-    
-        /*VIEWPORT (ventana visible)*/
-    .tienda-viewport {
-        width: 80%;
-        max-width: 900px;
-        overflow: hidden;
-        border-radius: 12px;
-    }
-    
-        /*TRACK (carril que se mueve)*/
-    .tienda-track {
-        display: flex;
-        transition: transform 0.4s ease; 
-    }
-    
-        /*CADA PRODUCTO*/
-    .tienda-item {
-        width: 25%;            
-        padding: 10px;
-        text-align: center;
-    }
-    
-    .tienda-item img {
-        width: 100%;
-        height: 180px;           
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    
-    .tienda-item p {
-        margin: 5px 0 0;
-        font-size: 14px;
-    }
-    
-        /*RESPONSIVE*/
-    @media (max-width: 768px) {
-        .tienda-item {
-            width: 50%;   /* En móvil → 2 productos por fila */
-        }
-    }
-
-
-
-/*CONTENIDO DINÁMICO: INICIO*/
-
-   .contenido-dinamico {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px 15px;
-}
-
-.inicio-title {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 20px;
-}
-
-.inicio-subtitle {
-    font-family: 'Josefin Slab', serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--text);
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+    background-color: #ffffff;
     line-height: 1.6;
 }
 
-/*SECCIÓN MISIÓN & VISIÓN*/
-
-   .mision-vision {
-    max-width: 950px;
-    margin: 0 auto;
+img {
+    max-width: 100%;
+    display: block;
 }
 
-.mv-box {
-    background: white;
-    padding: 25px 20px;
+/* ------------------------------
+   COLORES Y ESTILOS BASE
+-------------------------------*/
+:root {
+    --color-principal: #a0522d; /* Marrón Sabores Libres */
+    --color-secundario: #f2e8dc; 
+    --color-oscuro: #3b2d26;
+}
+
+/* ------------------------------
+   CONTENEDOR
+-------------------------------*/
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ------------------------------
+   HEADER
+-------------------------------*/
+header {
+    width: 100%;
+    background-color: var(--color-principal);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+/* Hamburguesa Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ------------------------------
+   HERO SECTION
+-------------------------------*/
+.hero {
+    background: url("./images/hero.jpg") center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0px 4px 6px rgba(0,0,0,0.5);
+}
+
+/* ------------------------------
+   SECCIONES GENERALES
+-------------------------------*/
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    color: var(--color-oscuro);
+}
+
+/* ------------------------------
+   GRID GENERAL
+-------------------------------*/
+.grid {
+    display: grid;
+    gap: 30px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* ------------------------------
+   CARTAS DE PRODUCTOS / INFO
+-------------------------------*/
+.card {
+    background: var(--color-secundario);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+/* ------------------------------
+   TIENDA (GALERÍA)
+-------------------------------*/
+.tienda-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.tienda-item img {
+    border-radius: 8px;
+}
+
+/* ------------------------------
+   DELIVERY
+-------------------------------*/
+.delivery-box {
+    background: var(--color-secundario);
+    padding: 30px;
+    border-radius: 16px;
     text-align: center;
 }
 
-.mv-title {
-    font-family: 'Raleway', sans-serif;
+.delivery-box h3 {
     font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--header2);
     margin-bottom: 10px;
 }
 
-.mv-text {
-    font-family: 'Josefin Slab', serif;
-    font-size: 1.15rem;
-    color: var(--text);
-    line-height: 1.6;
-}
-
-/* LÍNEA DIVISORIA ENTRE SECCIONES */
-.seccion-divider {
-    width: 80%;
-    height: 2px;
-    background-color: rgba(0,0,0,0.15);
-    margin: 50px auto;
-    border-radius: 50px;
-}
-
-
-
-/* NEWSLETTER */
-.newsletter {
-    background: var(--botton);
-    color: white;
-    padding: 25px 20px;
-    border-radius: 12px;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto; /* centra todo el newsletter */
-}
-
-.newsletter h3 {
-    font-family: 'Raleway', sans-serif;
-    margin-bottom: 15px;
-}
-
-    /* Contenedor del input + botón */
-.newsletter div {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap; /* no se rompe en mobile */
-}
-
-    /* Input */
-.newsletter input {
-    padding: 0.6rem 1rem;
-    border-radius: 8px;
-    border: 2px solid var(--header2);
-    width: 500px;
-}
-
-    /* Botón */
-.newsletter button {
-    padding: 0.6rem 1.3rem;
-    border-radius: 8px;
-    background: var(--header2);
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.newsletter button:hover {
-    background: var(--footer);
-}
-
-    /* RESPONSIVE */
-@media (max-width: 480px) {
-    .newsletter {
-        padding: 20px;
-    }
-
-    .newsletter div {
-        flex-direction: column; 
-    }
-
-    .newsletter input,
-    .newsletter button {
-        width: 100%;
-    }
-}
-
-
-/*RESEÑAS*/
-.resenas {
-    padding: 50px 0;
-}
-
-.resena-box {
-    background: white;
-    padding: 1.5rem;
+/* ------------------------------
+   RESERVA FORMULARIO
+-------------------------------*/
+form {
+    background: #fff;
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/*FOOTER*/
-   .footer {
-    background: var(--footer);
-    color: var(--text2);
-}
-
-.footer-logo {
-    width: 200px;
-}
-
-.footer-desc {
-    font-size: 0.95rem;
-    opacity: 0.8;
-}
-
-.footer-title {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
-    color: var(--text2);
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-links li a {
-    color: var(--text2);
-    text-decoration: none;
-    opacity: 0.8;
-    transition: 0.3s;
-}
-
-.footer-links li a:hover {
-    opacity: 1;
-    color: var(--header2);
-}
-
-.footer-redes img {
-    width: 32px;
-    margin: 0 8px;
-    transition: 0.3s;
-}
-
-.footer-redes img:hover {
-    transform: scale(1.15);
-    opacity: 0.8;
-}
-
-
-.footer-copy {
-    border-top: 1px solid rgba(255,255,255,0.2);
-    padding-top: 12px;
-    font-size: 0.9rem;
-    opacity: 0.7;
-}
-
-    /*RESPONSIVE FOOTER*/
-@media (max-width: 768px) {
-
-    .slider-text h1 {
-        font-size: 3rem;
-    }
-
-    .slider-text p {
-        font-size: 1.1rem;
-    }
-
-    .tenedor-header {
-        width: 45px;
-        top: 5px;
-        left: 5px;
-    }
-
-}
-
-/* REVISTA MENÚ */
-.menu-img {
-    width: 350px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.2);
-}
-
-.menu-revista {
-    margin-top: 30px;
-}
-
-.menu-arrow {
-    background: none;
-    border: none;
-    font-size: 2.5rem;
-    cursor: pointer;
-    padding: 10px;
-    color: var(--header2);
-}
-
-.menu-arrow:hover {
-    opacity: 0.7;
-}
-
-    /* Responsive */
-@media (max-width: 768px) {
-    .menu-img {
-        width: 150px;
-        height: 220px;
-    }
-}
-
-
-/*ESTILOS REVISTA – MENÚ*/
-.menu-revista {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.menu-img {
-    width: 350px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-}
-
-    /* Contenedor de páginas lado a lado */
-.menu-pages {
-    display: flex;
-    gap: 15px;
-}
-
-    /* Flechas */
-.menu-arrow {
-    background: var(--header2);
-    color: white;
-    border: none;
-    font-size: 2rem;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.25s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu-arrow:hover {
-    background: var(--botton);
-    transform: scale(1.1);
-}
-
-    /* RESPONSIVE REVISTA*/
-@media (max-width: 768px) {
-
-    .menu-img {
-        width: 150px;
-        height: 220px;
-        border-radius: 8px;
-    }
-
-    .menu-arrow {
-        width: 45px;
-        height: 45px;
-        font-size: 1.5rem;
-    }
-
-    .menu-pages {
-        gap: 8px;
-    }
-}
-
-
-/*BOTÓN DESCARGAR MENÚ PDF*/
-
-.btn-descargar-menu {
-    display: inline-block;
-    background: var(--header2);
-    color: white;
-    padding: 12px 28px;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    text-decoration: none;
+form label {
+    display: block;
+    margin-bottom: 8px;
     font-weight: 600;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.btn-descargar-menu:hover {
-    background: var(--botton);
-    transform: translateY(-3px);
-}
-
-
-/* RESERVAS */
-    /*CONTENEDOR GENERAL DEL FORMULARIO*/
-#seccion-reserva {
-    background-color: #fff8f0; /* beige claro */
-    padding: 3rem 2rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 3rem auto;
-    position: relative;
-    z-index: 10;
-  }
-  
-  /*TÍTULO*/
-  #seccion-reserva h2 {
-    text-align: center;
-    color: #e07a2c; /* naranja principal */
-    margin-bottom: 1.5rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
-  
-    /*CAMPOS DEL FORMULARIO */
-  #seccion-reserva form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  #seccion-reserva label {
-    font-weight: 500;
-    color: #444;
-  }
-  
-  #seccion-reserva input,
-  #seccion-reserva select,
-  #seccion-reserva textarea {
-    padding: 0.8rem;
-    border: 1.5px solid #ccc;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-  }
-  
-  /*Efecto al pasar el mouse sobre los campos */
-  #seccion-reserva input:hover,
-  #seccion-reserva select:hover,
-  #seccion-reserva textarea:hover {
-    border-color: #e07a2c;
-    background-color: #fff1e6;
-  }
-  
-  /*BOTÓN PRINCIPAL */
-  #seccion-reserva button {
-    background-color: #e07a2c;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 0.9rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 1rem;
-  }
-  
-  /*EFECTO HOVER DEL BOTÓN */
-  #seccion-reserva button:hover {
-    background-color: #ff9c4a;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(224, 122, 44, 0.4);
-  }
-  
-  /*MENSAJE DE CONFIRMACIÓN (paso 4) */
-  #mensaje-confirmacion {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #2d6a4f;
-    background-color: #e6ffea;
-    border: 1px solid #b7f2c2;
-    border-radius: 12px;
-    padding: 1rem;
-    margin-top: 1.5rem;
-    display: none; /* se muestra solo cuando se confirma */
-  }
-  
-  /*AJUSTE DE ALINEACIÓN DEL PASO 1*/
-#seccion-reserva .reserva-paso .row {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-  
-  #seccion-reserva .reserva-paso .col-md-5 {
-    flex: 1 1 300px; 
-    max-width: 400px;
-  }
-  
-  #seccion-reserva select.form-select {
-    height: 50px;
-    border-radius: 12px;
-    border: 2px solid #e8e8e8;
-    background-color: #fff;
-    transition: all 0.3s ease;
-  }
-  
-  #seccion-reserva select.form-select:hover {
-    border-color: #ff7f00;
-    box-shadow: 0 0 6px rgba(255, 127, 0, 0.3);
-  }
-  
-    /*SELECT FECHA Y HORA (PASO 2)*/
-#seccion-reserva select.form-select {
-    height: 50px;
-    border-radius: 12px;
-    border: 2px solid #e8e8e8;
-    font-size: 1rem;
-    background-color: #fff;
-    transition: all 0.3s ease;
-    padding: 10px 15px;
-  }
-  
-  #seccion-reserva select.form-select:hover {
-    border-color: #ff7f00;
-    box-shadow: 0 0 6px rgba(255, 127, 0, 0.3);
-  }
-  
-  #seccion-reserva select.form-select:focus {
-    border-color: #ff7f00;
-    box-shadow: 0 0 6px rgba(255, 127, 0, 0.4);
-    outline: none;
-  }
-
-  #volverInicio {
-    background-color: #ff7f00;
-    border: none;
-    color: #fff;
-    padding: 10px 25px;
-    border-radius: 12px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-  }
-  
-  #volverInicio:hover {
-    background-color: #e76e00;
-    transform: scale(1.05);
-  }
-
-/*SECCIÓN DELIVERY*/
-#seccion-delivery {
-    background-color: #fff8f1; /* fondo claro cálido */
-    padding: 60px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-top: 3px solid #f9a43f; /* línea naranja superior */
-  }
-  
-  .delivery-container {
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 900px;
+form input,
+form textarea,
+form select {
     width: 100%;
-    gap: 40px;
-  }
-  
-  /*Texto centrado */
-  .delivery-text {
-    flex: 1 1 350px;
-    text-align: center;
-  }
-  
-  .delivery-text h3 {
-    color: #e57200;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-  }
-  
-  .delivery-text p {
-    color: #555;
-    font-size: 1.1rem;
-    margin-bottom: 25px;
-    line-height: 1.6;
-  }
-  
-  /*Botón PedidosYa*/
-  .delivery-btn {
-    width: 180px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-  }
-  
-  .delivery-btn:hover {
-    transform: scale(1.05);
-    border-color: #f9a43f;
-    box-shadow: 0 0 15px rgba(249, 164, 63, 0.4);
-  }
-  
-  /*Imagen del repartidor*/
-  .delivery-img img {
-    max-width: 350px;
-    width: 100%;
-    border-radius: 16px;
-    transition: transform 0.3s ease;
-  }
-  
-  .delivery-img img:hover {
-    transform: scale(1.03);
-  }
-  
-  /*Responsive*/
-  @media (max-width: 768px) {
-    .delivery-container {
-      flex-direction: column;
-      text-align: center;
-      padding: 30px 20px;
-    }
-  
-    .delivery-text {
-      text-align: center;
-    }
-  
-    .delivery-btn {
-      width: 150px;
-    }
-  
-    .delivery-img img {
-      max-width: 280px;
-    }
-  }
-
-  #seccion-promocion {
-    background-color: #fff8f1; /* fondo claro cálido */
-    padding: 60px 20px;
-    display: flex;
-    justify-content: center;
-}
-
-  
-/*PROMOCION*/
-    /* CONTENEDOR PRINCIPAL */
-.promocion-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* permite que se adapten en móvil */
-    gap: 40px;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background-color: #fff8f1; /* fondo cálido similar a Delivery */
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-    /* TEXTO */
-.promocion-text {
-    flex: 1 1 350px;
-    text-align: left;
-}
-
-.promocion-text h2 {
-    color: #e57200;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.promocion-text p {
-    color: #555;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
     margin-bottom: 20px;
 }
 
-    /* BOTÓN */
-.promocion-btn {
-    display: inline-block;
-    background-color: #e57200;
-    color: white;
-    padding: 12px 28px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.promocion-btn:hover {
-    background-color: #f9a43f;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(249, 164, 63, 0.4);
-}
-
-    /* IMAGEN */
-.promocion-img {
-    flex: 1 1 300px;
-    text-align: center;
-}
-
-.promocion-img img {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 16px;
-    transition: transform 0.3s ease;
-}
-
-.promocion-img img:hover {
-    transform: scale(1.03);
-}
-
-    /* RESPONSIVE PROMOCIÓN*/
-@media (max-width: 768px) {
-    .promocion-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 15px;
-    }
-
-    .promocion-text {
-        text-align: center;
-    }
-
-    .promocion-btn {
-        width: 80%;
-        max-width: 250px;
-    }
-
-    .promocion-img img {
-        max-width: 280px;
-    }
-}
-
-/*SECCIÓN CARGA TU CV*/
-   #seccion-cv {
-    background-color: #f8f5f0; /* fondo beige */
-    padding: 60px 20px;
-}
-
-#seccion-cv h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #333;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-#seccion-cv p {
-    font-size: 1.1rem;
-    color: #555;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-    /* FORMULARIO */
-#form-cv {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#form-cv .form-label {
-    font-weight: 500;
-    color: #333;
-}
-
-#form-cv .form-control {
-    border-radius: 8px;
-    border: 1.5px solid #ccc;
-    padding: 0.6rem 1rem;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-#form-cv .form-control:hover,
-#form-cv .form-control:focus {
-    border-color: #e07a2c;
-    box-shadow: 0 0 6px rgba(224, 122, 44, 0.2);
-    outline: none;
-}
-
-    /* BOTONES */
-#form-cv .btn {
-    border-radius: 8px;
-    min-width: 140px;
-    padding: 0.6rem 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-    /* Botón enviar */
-#form-cv button.btn-primary {
-    background-color: #2e59a7;
+form button {
+    background-color: var(--color-principal);
     color: #fff;
     border: none;
-}
-
-#form-cv button.btn-primary:hover {
-    background-color: #1f3f7a;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-    /* Botón personalizado subir archivo */
-#form-cv .btn-upload {
-    position: relative;
-    overflow: hidden;
+    padding: 12px 20px;
+    border-radius: 10px;
     cursor: pointer;
-    display: inline-block;
-    background-color: #6c757d;
-    color: #fff;
-    padding: 0.6rem 1.2rem;
-    font-weight: 600;
-    border-radius: 8px;
+    transition: 0.3s;
+}
+
+form button:hover {
+    opacity: 0.8;
+}
+
+/* ------------------------------
+   FOOTER
+-------------------------------*/
+footer {
+    background-color: var(--color-principal);
+    padding: 30px 0;
     text-align: center;
-    transition: all 0.3s ease;
+    color: white;
 }
 
-#form-cv .btn-upload:hover {
-    background-color: #5a6268;
+/* ------------------------------
+   RESPONSIVE DESIGN
+-------------------------------*/
+
+/* Tablets */
+@media (max-width: 992px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
 }
 
-#form-cv .btn-upload input[type="file"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-
-    /* Ícono PDF al lado del nombre de archivo */
-#form-cv .btn-upload span::before {
-    content: "📄 ";
-    margin-right: 8px;
-}
-
-    /* Contenedor botones */
-#form-cv .d-flex {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-    /* MENSAJE DE ÉXITO */
-#mensaje-cv {
-    font-weight: 600;
-    color: green;
-    font-size: 1.1rem;
-    text-align: center;
-    margin-top: 20px;
-    display: none;
-    animation: fadeInOut 4s ease forwards;
-}
-
-    /* Animación fade */
-@keyframes fadeInOut {
-    0%, 80% { opacity: 0; }
-    10%, 70% { opacity: 1; }
-}
-
-    /*RESPONSIVE CARGA TU CV*/
+/* Mobile */
 @media (max-width: 768px) {
-    #form-cv {
-        padding: 20px;
-    }
 
-    #form-cv .d-flex {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #form-cv .btn {
+    /* NAV MOBILE */
+    nav ul {
+        position: absolute;
+        top: 70px;
+        background: var(--color-principal);
         width: 100%;
+        flex-direction: column;
+        left: 0;
+        padding: 20px 0;
+        display: none;
+        gap: 18px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: 50vh;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
     }
 }
