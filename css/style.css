@@ -767,19 +767,32 @@
 
 
 /*RESEÑAS*/
-    .resenas {
-        padding: 50px 0;
+.resenas {
+    padding: 50px 0;
+}
+
+.resena-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+    /*RESEÑAS RESPONSIVE*/
+    @media (max-width: 768px) {
+        .resenas {
+            padding: 30px 5px;
+        }
+
+        .resena-box {
+            flex: 1 1 100%;
+            max-width: 100%;
+            padding: 0.8rem;
+        }
+
+        .resena-box p {
+            font-size: 0.95rem;
+        }
     }
-
-    .resena-box {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    
-
-
 
 
 /*FOOTER*/
