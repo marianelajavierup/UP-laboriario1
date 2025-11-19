@@ -317,6 +317,13 @@ header {
         transform: translateY(-3px);
         box-shadow: 0 5px 15px rgba(249, 164, 63, 0.4);
     }
+
+    #seccion-promocion {
+        background-color: #fff8f1; /* fondo claro cálido */
+        padding: 60px 20px;
+        display: flex;
+        justify-content: center;
+    }
     
         /* IMAGEN */
     .promocion-img {
@@ -361,14 +368,15 @@ header {
 
 
 /*SECCIÓN DELIVERY*/
+/* SECCIÓN DELIVERY */
 #seccion-delivery {
-    background-color: #fff8f1; /* fondo claro cálido */
+    background-color: #fff8f1;
     padding: 60px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-top: 3px solid #f9a43f; /* línea naranja superior */
+    border-top: 3px solid #f9a43f;
   }
   
   .delivery-container {
@@ -376,36 +384,40 @@ header {
     border-radius: 16px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     max-width: 900px;
     width: 100%;
-    gap: 40px;
   }
   
-  /*Texto centrado */
-  .delivery-text {
+  /* CONTENEDOR EN 2 COLUMNAS */
+  .delivery-columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* mantiene la responsividad */
+  }
+  
+  /* COLUMNA IZQUIERDA */
+  .delivery-left {
     flex: 1 1 350px;
     text-align: center;
   }
   
-  .delivery-text h3 {
+  .delivery-left h3 {
     color: #e57200;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 15px;
   }
   
-  .delivery-text p {
+  .delivery-left p {
     color: #555;
     font-size: 1.1rem;
     margin-bottom: 25px;
     line-height: 1.6;
   }
   
-  /*Botón PedidosYa*/
+  /* Botón Pedidos Ya */
   .delivery-btn {
     width: 180px;
     border-radius: 12px;
@@ -419,27 +431,22 @@ header {
     box-shadow: 0 0 15px rgba(249, 164, 63, 0.4);
   }
   
-  /*Imagen del repartidor*/
-  .delivery-img img {
-    max-width: 350px;
-    width: 100%;
+  /* COLUMNA DERECHA: IMAGEN */
+  .delivery-right img {
+    width: 260px;      /* 🔥 MÁS CHICA (ajustado) */
+    max-width: 100%;
     border-radius: 16px;
     transition: transform 0.3s ease;
   }
   
-  .delivery-img img:hover {
+  .delivery-right img:hover {
     transform: scale(1.03);
   }
   
-  /*Responsive*/
+  /* RESPONSIVE */
   @media (max-width: 768px) {
-    .delivery-container {
+    .delivery-columns {
       flex-direction: column;
-      text-align: center;
-      padding: 30px 20px;
-    }
-  
-    .delivery-text {
       text-align: center;
     }
   
@@ -447,17 +454,12 @@ header {
       width: 150px;
     }
   
-    .delivery-img img {
-      max-width: 280px;
+    .delivery-right img {
+      width: 220px; /* aún más chica para móvil */
     }
   }
+  
 
-  #seccion-promocion {
-    background-color: #fff8f1; /* fondo claro cálido */
-    padding: 60px 20px;
-    display: flex;
-    justify-content: center;
-}
 
 
 
