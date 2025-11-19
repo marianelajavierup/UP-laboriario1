@@ -80,6 +80,69 @@ header {
     opacity: 0.85;
 }
 
+
+/* ESTILOS DEL MODAL DE REGISTRO*/
+/* FORMULARIOS (Registro & Login) estilo Newsletter */
+.form-usuario {
+    background: var(--botton);
+    color: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.form-usuario h3 {
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+}
+
+.form-usuario .form-control {
+    border-radius: 8px;
+    border: 2px solid var(--header2);
+    padding: 0.55rem 1rem;
+}
+
+.form-usuario button {
+    padding: 0.6rem 1.3rem;
+    border-radius: 8px;
+    background: var(--header2);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.form-usuario button:hover {
+    background: var(--footer);
+}
+
+/* Modal personalizado */
+.modal-content {
+    border-radius: 14px;
+}
+.modal-header .modal-title {
+    color: var(--header2);
+    font-weight: bold;
+}
+
+/* ------------------------------ */
+/* RESPONSIVE */
+/* ------------------------------ */
+
+@media (max-width: 480px) {
+    #formRegistroModal .modal-content {
+        padding: 20px;
+    }
+
+    #formRegistroModal .modal-title {
+        font-size: 1.4rem;
+    }
+}
+
+
 /*SLIDER- BANNER*/
 .carousel-item img {
     width: 100%;
