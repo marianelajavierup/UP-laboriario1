@@ -87,109 +87,76 @@
       <h2 class="mb-4">Hacé tu Reserva</h2>
       <p>"Reservá tu mesa en Sabores Libres y descubrí el verdadero placer de comer sin preocupaciones."</p>
   
-      <form id="form-reserva">
-        <!-- Paso 1 -->
-        <div class="reserva-paso" id="reserva-paso1">
-          <div class="row justify-content-center g-3">
-            <div class="col-md-5">
-              <label>Desayuno / Almuerzo / Merienda / Cena:</label>
-              <select id="tipoReserva" class="form-select">
-                <option value="">Elegí tu opción</option>
+      <section class="reservas">
+        <section class="reserva-box">
+          <div class="container">
+            <h2>Reservas</h2>
+            <div class="reservas-grid">
+              <form class="grid" id="form-reservas">
+                <label>Fecha<input type="date" name="fecha" required></label>
+                <label>Hora
+                  <select name="hora" required>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                    <option value="22:00">22:00</option>
+                  </select>
+                </label>
+                <label>Comensales<input type="number" name="comensales" min="1" value="2" required></label>
+                <label><section class="reservas">
+    <section class="reserva-box">
+      <div class="container">
+        <h2>Reservas</h2>
+        <div class="reservas-grid">
+          <form class="grid" id="form-reservas">
+            <label>Fecha<input type="date" name="fecha" required></label>
+            <label>Hora
+              <select name="hora" required>
+                <option value="8:30">20:00</option>
+                <option value="9:00">20:00</option>
+                <option value="9:30">20:00</option>
+                <option value="10:00">20:00</option>
+                <option value="10:30">20:00</option>
+                <option value="11:00">20:00</option>
+                <option value="11:30">20:00</option>
+                <option value="12:00">20:00</option>
+                <option value="12:30">20:00</option>
+                <option value="13:00">20:00</option>
+                <option value="13:30">20:00</option>
+                <option value="14:00">20:00</option>
+                <option value="14:30">20:00</option>
+                <option value="15:00">20:00</option>
+                <option value="15:30">20:00</option>
+                <option value="16:00">20:00</option>
+                <option value="16:30">20:00</option>
+                <option value="17:00">20:00</option>
+                <option value="17:30">20:00</option>
+                <option value="18:00">20:00</option>
+                <option value="18:30">20:00</option>
+                <option value="19:00">20:00</option>
+                <option value="19:30">20:00</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+                <option value="21:30">21:30</option>
+                <option value="22:00">22:00</option>
+              </select>
+            </label>
+            <label>Comensales<input type="number" name="comensales" min="1" value="2" required></label>
+            <label>Cúando deseas Venitarnos
+              <select name="¿Cúando deseas Venitarnos?">
                 <option>Desayuno</option>
                 <option>Almuerzo</option>
                 <option>Merienda</option>
                 <option>Cena</option>
               </select>
-            </div>
-  
-            <div class="col-md-5">
-              <label>Cantidad de personas:</label>
-              <select id="personas" class="form-select">
-                <option value="">Seleccionar</option>
-                <option>1</option><option>2</option><option>3</option>
-                <option>4</option><option>5</option><option>6</option>
-              </select>
-            </div>
-          </div>
-  
-          <button type="button" id="btnPaso1" class="btn btn-primary mt-4">Siguiente</button>
-        </div>
-  
-        <!-- Paso 2 -->
-        <div class="reserva-paso" id="reserva-paso2" style="display:none;">
-          <label>Seleccioná fecha y hora:</label>
-          <div class="row justify-content-center g-3 mt-3">
-            <div class="col-md-5">
-              <input type="date" class="form-control">
-            </div>
-            <div class="col-md-5">
-                <label for="horaReserva" class="form-label">Horario:</label>
-                <select id="horaReserva" class="form-select">
-                  <option value="">Seleccioná horario</option>
-                  <option>09:00</option>
-                  <option>09:30</option>
-                  <option>10:00</option>
-                  <option>10:30</option>
-                  <option>11:00</option>
-                  <option>11:30</option>
-                  <option>12:00</option>
-                  <option>12:30</option>
-                  <option>13:00</option>
-                  <option>13:30</option>
-                  <option>14:00</option>
-                  <option>14:30</option>
-                  <option>15:00</option>
-                  <option>15:30</option>
-                  <option>16:00</option>
-                  <option>16:30</option>
-                  <option>17:00</option>
-                  <option>17:30</option>
-                  <option>18:00</option>
-                  <option>18:30</option>
-                  <option>19:00</option>
-                  <option>19:30</option>
-                  <option>20:00</option>
-                  <option>20:30</option>
-                  <option>21:00</option>
-                  <option>21:30</option>
-                  <option>22:00</option>
-                </select>
-              </div>
-               
-          </div>
-          <div class="mt-4">
-            <button type="button" class="btn btn-secondary" id="volver1">Volver</button>
-            <button type="button" class="btn btn-primary" id="btnPaso2">Siguiente</button>
-          </div>
-        </div>
-  
-        <!-- Paso 3 -->
-        <div class="reserva-paso" id="reserva-paso3" style="display:none;">
-          <div class="row justify-content-center g-3">
-            <div class="col-md-5">
-              <input type="text" class="form-control" placeholder="Nombre Completo">
-            </div>
-            <div class="col-md-5">
-              <input type="tel" class="form-control" placeholder="Teléfono de contacto">
-            </div>
-          </div>
-          <div class="mt-4">
-            <button type="button" class="btn btn-secondary" id="volver2">Volver</button>
-            <button type="button" class="btn btn-primary" id="btnPaso3">Siguiente</button>
-          </div>
-        </div>
-  
-        <!-- Paso 4 (Confirmación) -->
-        <!-- Paso 4 (Confirmación) -->
-            <div class="reserva-paso" id="reserva-paso4" style="display:none;">
-                <h3>✅ ¡Tu reserva ha sido confirmada!</h3>
-                <p>Nos comunicaremos contigo para finalizar los detalles.</p>
-                <button type="button" class="btn btn-primary" id="volverInicio">Volver al Inicio</button>
-            </div>
-    </form>
-    </div>
+            </label>
+            <label class="wide">Email de confirmación<input type="email" name="email" placeholder="tu@mail.com" required></label>
+            <button class="btn" type="submit">Confirmar</button>
+          </form>
+    </section>
 </section>
-
 </body>
 
 <!--FOOTER-->
