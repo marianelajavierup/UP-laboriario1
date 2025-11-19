@@ -80,84 +80,140 @@
         </div>
 </header>
 
-<body>
-<!-- SECCIÓN RESERVA -->
-<section id="seccion-reserva" class="bg1 py-5" style="display:none;">
-    <div class="container text-center">
-      <h2 class="mb-4">Hacé tu Reserva</h2>
-      <p>"Reservá tu mesa en Sabores Libres y descubrí el verdadero placer de comer sin preocupaciones."</p>
-  
-      <section class="reservas">
-        <section class="reserva-box">
-          <div class="container">
-            <h2>Reservas</h2>
-            <div class="reservas-grid">
-              <form class="grid" id="form-reservas">
-                <label>Fecha<input type="date" name="fecha" required></label>
-                <label>Hora
-                  <select name="hora" required>
-                    <option value="20:00">20:00</option>
-                    <option value="20:30">20:30</option>
-                    <option value="21:00">21:00</option>
-                    <option value="21:30">21:30</option>
-                    <option value="22:00">22:00</option>
-                  </select>
-                </label>
-                <label>Comensales<input type="number" name="comensales" min="1" value="2" required></label>
-                <label><section class="reservas">
-    <section class="reserva-box">
-      <div class="container">
-        <h2>Reservas</h2>
-        <div class="reservas-grid">
-          <form class="grid" id="form-reservas">
-            <label>Fecha<input type="date" name="fecha" required></label>
-            <label>Hora
-              <select name="hora" required>
-                <option value="8:30">20:00</option>
-                <option value="9:00">20:00</option>
-                <option value="9:30">20:00</option>
-                <option value="10:00">20:00</option>
-                <option value="10:30">20:00</option>
-                <option value="11:00">20:00</option>
-                <option value="11:30">20:00</option>
-                <option value="12:00">20:00</option>
-                <option value="12:30">20:00</option>
-                <option value="13:00">20:00</option>
-                <option value="13:30">20:00</option>
-                <option value="14:00">20:00</option>
-                <option value="14:30">20:00</option>
-                <option value="15:00">20:00</option>
-                <option value="15:30">20:00</option>
-                <option value="16:00">20:00</option>
-                <option value="16:30">20:00</option>
-                <option value="17:00">20:00</option>
-                <option value="17:30">20:00</option>
-                <option value="18:00">20:00</option>
-                <option value="18:30">20:00</option>
-                <option value="19:00">20:00</option>
-                <option value="19:30">20:00</option>
-                <option value="20:00">20:00</option>
-                <option value="20:30">20:30</option>
-                <option value="21:00">21:00</option>
-                <option value="21:30">21:30</option>
-                <option value="22:00">22:00</option>
-              </select>
-            </label>
-            <label>Comensales<input type="number" name="comensales" min="1" value="2" required></label>
-            <label>Cúando deseas Venitarnos
-              <select name="¿Cúando deseas Venitarnos?">
-                <option>Desayuno</option>
-                <option>Almuerzo</option>
-                <option>Merienda</option>
-                <option>Cena</option>
-              </select>
-            </label>
-            <label class="wide">Email de confirmación<input type="email" name="email" placeholder="tu@mail.com" required></label>
-            <button class="btn" type="submit">Confirmar</button>
-          </form>
+<body> 
+    <!-- SECCIÓN RESERVA -->
+    <section id="seccion-reserva" class="py-5 bg1">
+    
+        <div class="container text-center">
+            <h2 class="mb-4">Hacé tu Reserva</h2>
+            <p class="mb-5">"Reservá tu mesa en Sabores Libres y descubrí el verdadero placer de comer sin preocupaciones."</p>
+        </div>
+    
+        <div class="container">
+            <div class="row justify-content-center">
+    
+                <div class="col-md-8 col-lg-6">
+                    <div class="card p-4 shadow reserva-card">
+    
+                        <h3 class="text-center mb-4">Formulario de Reservas</h3>
+    
+                        <form id="formReserva">
+    
+                            <div class="mb-3">
+                                <label class="form-label">Fecha</label>
+                                <input type="date" id="fecha" class="form-control" required>
+                            </div>
+    
+                            <div class="mb-3">
+                                <label class="form-label">Hora</label>
+                                <select id="hora" class="form-select" required>
+                                    <option value="08:30">08:30</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="09:30">09:30</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="10:30">10:30</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="11:30">11:30</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="14:30">14:30</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="15:30">15:30</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="16:30">16:30</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="17:30">17:30</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="18:30">18:30</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                    <option value="21:30">21:30</option>
+                                    <option value="22:00">22:00</option>
+                                    <option value="22:30">22:30</option>
+                                </select>
+                            </div>
+    
+                            <div class="mb-3">
+                                <label class="form-label">Comensales</label>
+                                <input type="number" id="comensales" class="form-control" min="1" value="2" required>
+                            </div>
+    
+                            <div class="mb-3">
+                                <label class="form-label">Momento del día</label>
+                                <select id="momento" class="form-select">
+                                    <option>Desayuno</option>
+                                    <option>Almuerzo</option>
+                                    <option>Merienda</option>
+                                    <option>Cena</option>
+                                </select>
+                            </div>
+    
+                            <div class="mb-3">
+                                <label class="form-label">Email de confirmación</label>
+                                <input type="email" id="email" class="form-control" placeholder="tu@mail.com" required>
+                            </div>
+    
+                            <button type="submit" class="btn btn-warning w-100 mt-3">Confirmar Reserva</button>
+    
+                        </form>
+    
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
     </section>
-</section>
-</body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("formReserva");
+    
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+    
+            // Obtener los datos
+            const fecha = document.getElementById("fecha").value;
+            const hora = document.getElementById("hora").value;
+            const comensales = document.getElementById("comensales").value;
+            const momento = document.getElementById("momento").value;
+            const email = document.getElementById("email").value;
+    
+            // Ocultar formulario
+            form.style.display = "none";
+    
+            // Crear mensaje
+            const mensaje = document.createElement("div");
+            mensaje.className = "text-center mt-5";
+            mensaje.innerHTML = `
+                <h3 class="text-success mb-3">¡Tu reserva fue realizada con éxito! 🎉</h3>
+                <p><strong>Fecha:</strong> ${fecha}</p>
+                <p><strong>Hora:</strong> ${hora}</p>
+                <p><strong>Comensales:</strong> ${comensales}</p>
+                <p><strong>Momento del día:</strong> ${momento}</p>
+                <p><strong>Confirmación enviada a:</strong> ${email}</p>
+    
+                <p class="mt-4">Gracias por elegir <strong>Sabores Libres</strong>.  
+                ¡Te esperamos para disfrutar una experiencia libre de gluten!</p>
+    
+                <a href="index.html" class="btn btn-warning mt-3">Volver al inicio</a>
+            `;
+    
+            form.parentNode.insertBefore(mensaje, form);
+        });
+    });
+    </script>
+    
+    </body>
+    
 
 <!--FOOTER-->
 <footer class="footer bg3 text-light pt-5 pb-3">
