@@ -236,8 +236,9 @@
     #seccion-menu h2 {
         font-family: "Raleway";
         color: var(--header2);
-        font-size: 3rem;
-        margin-bottom: 20px;
+        font-size: 2rem;
+        margin-bottom: 15px;
+        font-weight: 700;
     }
 
     /* Botón descargar PDF */
