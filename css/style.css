@@ -179,87 +179,114 @@ header {
 
 
 /*SECCIÓN MENÚ*/
+    /* MENÚ Título */
+    #seccion-menu h3 {
+        font-family: "Raleway";
+        color: var(--header2);
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
 
-/* Botón descargar PDF */
-.btn-descargar-menu,
-.btn-descargar-menu:visited {
-    background-color: var(--botton);
-    color: var(--text2);
-    font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-    margin-bottom: 20px;
-}
+    /* Botón descargar PDF */
+    .btn-descargar-menu,
+    .btn-descargar-menu:visited {
+        background-color: var(--botton);
+        color: var(--text2);
+        font-weight: 600;
+        padding: 12px 22px;
+        border-radius: 14px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-bottom: 30px;
+    }
 
-.btn-descargar-menu:hover {
-    background-color: var(--header2);
-    color: white;
-    transform: scale(1.05);
-}
+    .btn-descargar-menu:hover {
+        background-color: var(--botton);
+        color: white;
+        transform: scale(1.05);
+    }
 
-/* Contenedor principal del carrusel */
-#revistaMenu {
-    max-width: 1000px;
-    margin: 0 auto;
-}
+    /*MENU galería*/
 
-/* Estilo de las imágenes del carrusel */
-#revistaMenu img {
+    /* Galería de Menú — imágenes sin recorte */
+.menu-galeria-img {
     width: 100%;
-    border-radius: 18px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    height: auto;          /* no recorta, respeta proporciones originales */
+    border-radius: 10px;
+    transition: transform .3s ease, box-shadow .3s ease;
+    cursor: pointer;
+
+    /* Para mantener armonía entre imágenes de distinta altura */
+    max-height: 460px;     /* ajustable según necesidad */
+    object-fit: contain;   /* muestra todo sin cortar */
+    background: #ffffff;   /* fondo limpio si la imagen no ocupa todo */
+    padding: 6px;          /* pequeño marco para estética */
 }
 
-/* Flechas del carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(100%); /* las hace blancas */
-}
+    /* Hover*/
+    .menu-galeria-img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
 
-/* Fondo de indicadores */
-.carousel-indicators button {
-    background-color: var(--header2);
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
 
-.carousel-indicators .active {
-    background-color: var(--botton);
-}
+    /* Espaciado general */
+    .menu-revista {
+        margin-top: 25px;
+    }
 
-/* Ajustes de spacing */
-.menu-revista {
-    margin-top: 25px;
-}
+    /*MENU galería (IMAGEN AMPLIADA)*/
 
-/* Título MENÚ */
-#seccion-menu h2 {
-    font-family: "Richie Brusher";
-    color: var(--header2);
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-
-    #revistaMenu img {
+    .modal-content {
+        border: none;
+        background: #000 !important;
+        padding: 0;
         border-radius: 14px;
     }
 
-    #seccion-menu h2 {
-        font-size: 2.4rem;
+    .modal-content img {
+        width: 100%;
+        border-radius: 14px;
     }
 
-    .btn-descargar-menu {
-        font-size: 0.9rem;
-        padding: 8px 16px;
+    /*MENU RESPONSIVE*/
+
+    @media (max-width: 992px) {
+        #seccion-menu h2 {
+            font-size: 2.6rem;
+        }
+
+        .menu-galeria-img {
+            border-radius: 14px;
+        }
     }
-}
+
+    @media (max-width: 768px) {
+        #seccion-menu h2 {
+            font-size: 2.3rem;
+        }
+
+        .btn-descargar-menu {
+            font-size: 0.9rem;
+            padding: 10px 18px;
+        }
+
+        .menu-galeria-img {
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+    }
+
+    @media (max-width: 480px) {
+        #seccion-menu h2 {
+            font-size: 2rem;
+        }
+
+        .menu-galeria-img {
+            border-radius: 10px;
+        }
+    }
 
 
 /*PROMOCION*/
@@ -437,10 +464,6 @@ header {
     max-width: 100%;
     border-radius: 16px;
     transition: transform 0.3s ease;
-  }
-  
-  .delivery-right img:hover {
-    transform: scale(1.03);
   }
   
   /* RESPONSIVE */
