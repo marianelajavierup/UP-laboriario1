@@ -16,222 +16,219 @@
 
 <body class="bg1"> <!-- Fondo beige general -->
 
-<!--HEADER-->
-    <!--BARRA LOGO + TIENDA + USUARIO -->
-<header class="header-principal bg1">
+    <!--HEADER-->
+        <!--BARRA LOGO + TIENDA + USUARIO -->
+        <header class="header-principal bg1">
+        <div class="container d-flex justify-content-between align-items-center py-3 position-relative">
 
-    <div class="container d-flex justify-content-between align-items-center py-3 position-relative">
+            <!--LOGO TENEDOR-->
+            <a href="index.html">
+                <img src="img/tenedor.png" alt="Tenedor" class="tenedor-header">
+            </a>
 
-        <!--LOGO TENEDOR-->
-        <a href="index.html">
-            <img src="img/tenedor.png" alt="Tenedor" class="tenedor-header">
-        </a>
-
-        <!--ICONOS: TIENDA + USUARIO-->
-        <div class="header-opciones d-flex align-items-center gap-4">
-            <a href="delivery.html"><img src="img/tienda.png" alt="Tienda" class="icono-header"></a>
-            <a href="usuario.html"><img src="img/usuario.png" alt="Usuario" class="icono-header"></a>
-        </div>
-
-    </div>
-
-
-    <!--BARRA DE NAVEGACIÓN NARANJA -->
-    <nav class="navbar navbar-expand-lg bg2">
-        <div class="container">
-  
-            <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navBarPrincipal">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-  
-            <div class="collapse navbar-collapse justify-content-center" id="navBarPrincipal">
-                <ul class="navbar-nav gap-4 MS-auto text-center">
-                <li class="nav-item"><a class="nav-link text-light nav-btn" href="nosotros.html">NOSOTROS</a></li>
-                <li class="nav-item"><a class="nav-link text-light nav-btn" href="menu.html">MENÚ</a></li>
-                <li class="nav-item"><a class="nav-link text-light nav-btn" href="promocion.html">PROMOCIÓN</a></li>
-                <li class="nav-item"><a class="nav-link text-light nav-btn" href="delivery.html">DELIVERY</a></li>
-                <li class="nav-item"><a class="nav-link text-light nav-btn" href="reserva.html">RESERVA</a></li>
-                </ul>
+            <!--ICONOS: TIENDA + USUARIO-->
+            <div class="header-opciones d-flex align-items-center gap-4">
+                <a href="delivery.html"><img src="img/tienda.png" alt="Tienda" class="icono-header"></a>
+                <a href="usuario.html"><img src="img/usuario.png" alt="Usuario" class="icono-header"></a>
             </div>
-  
+
         </div>
-    </nav>
-   
+
+        <!--BARRA DE NAVEGACIÓN NARANJA -->
+        <nav class="navbar navbar-expand-lg bg2">
+            <div class="container">
     
-    <!-- Banner superior / SLIDER -->
-    <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
-
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000">
-                <img src="img/banner1.jpg" class="d-block w-100" alt="">
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="img/banner2.jpg" class="d-block w-100" alt="">
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="img/banner3.jpg" class="d-block w-100" alt="">
-            </div>
-        </div>
-
-    </div>
-
-    <!--TEXTO FIJO SOBRE EL SLIDER-->
-        <div class="slider-text">
-            <h1>Sabores Libres</h1>
-            <p>Descubrí el verdadero placer de comer sin preocupaciones</p>
-        </div>
-</header>
-
-
-<!--ÁREA DINÁMICA (FONDO BEIGE) -->
-
-<!--LÍNEA DIVISORIA-->
-<div class="seccion-divider"></div>
-
-<!--SECCIÓN TIENDA-->
-<section id="seccion-tienda" class="bg1 py-5">
-    <div class="container text-center">
-
-        <h2 class="mb-4 titulo-seccion">TIENDA</h2>
-
-        <!-- GRID DE PRODUCTOS -->
-        <div class="row justify-content-center g-4 tienda-grid">
-
-            <!-- PRODUCTO 1 -->
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="producto card-producto shadow-sm">
-                    <img src="img/producto1.jpg" class="img-fluid mb-2 producto-img" alt="Producto 1">
-                    <p class="fw-bold producto-nombre">Producto 1</p>
-                    <p class="producto-precio">$1000</p>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navBarPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse justify-content-center" id="navBarPrincipal">
+                    <ul class="navbar-nav gap-4 MS-auto text-center">
+                    <li class="nav-item"><a class="nav-link text-light nav-btn" href="nosotros.html">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link text-light nav-btn" href="menu.html">MENÚ</a></li>
+                    <li class="nav-item"><a class="nav-link text-light nav-btn" href="promocion.html">PROMOCIÓN</a></li>
+                    <li class="nav-item"><a class="nav-link text-light nav-btn" href="delivery.html">DELIVERY</a></li>
+                    <li class="nav-item"><a class="nav-link text-light nav-btn" href="reserva.html">RESERVA</a></li>
+                    </ul>
                 </div>
+    
             </div>
+        </nav>
+    
+        <!-- Banner superior / SLIDER -->
+        <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
 
-            <!-- PRODUCTO 2 -->
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="producto card-producto shadow-sm">
-                    <img src="img/producto2.jpg" class="img-fluid mb-2 producto-img" alt="Producto 2">
-                    <p class="fw-bold producto-nombre">Producto 2</p>
-                    <p class="producto-precio">$1000</p>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="img/banner1.jpg" class="d-block w-100" alt="">
                 </div>
-            </div>
-
-            <!-- PRODUCTO 3 -->
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="producto card-producto shadow-sm">
-                    <img src="img/producto3.jpg" class="img-fluid mb-2 producto-img" alt="Producto 3">
-                    <p class="fw-bold producto-nombre">Producto 3</p>
-                    <p class="producto-precio">$1000</p>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="img/banner2.jpg" class="d-block w-100" alt="">
                 </div>
-            </div>
-
-            <!-- PRODUCTO 4 -->
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="producto card-producto shadow-sm">
-                    <img src="img/producto4.jpg" class="img-fluid mb-2 producto-img" alt="Producto 4">
-                    <p class="fw-bold producto-nombre">Producto 4</p>
-                    <p class="producto-precio">$1000</p>
-                </div>
-            </div>
-
-            <!-- PRODUCTO 5 -->
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="producto card-producto shadow-sm">
-                    <img src="img/producto5.jpg" class="img-fluid mb-2 producto-img" alt="Producto 5">
-                    <p class="fw-bold producto-nombre">Producto 5</p>
-                    <p class="producto-precio">$1000</p>
-                </div>
-            </div>
-
-            <!-- PRODUCTO 6 -->
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="producto card-producto shadow-sm">
-                    <img src="img/producto6.jpg" class="img-fluid mb-2 producto-img" alt="Producto 6">
-                    <p class="fw-bold producto-nombre">Producto 6</p>
-                    <p class="producto-precio">$1000</p>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="img/banner3.jpg" class="d-block w-100" alt="">
                 </div>
             </div>
 
         </div>
 
-    </div>
-</section>
-
-
-<!-- NEWSLETTER -->
-    <section class="newsletter mt-5">
-        <h3>Entérate de todas nuestras novedades</h3>
-
-        <!-- FORMULARIO -->
-        <form id="formNewsletter" class="mt-3" action="#" method="POST">
-            <input type="email" name="email" placeholder="Ingresá tu email" required>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-        <!-- MODAL REGISTRO EXITOSO -->
-        <div class="modal fade modal-confirm" id="modalNewsletterOk" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h5 class="modal-title">¡Registro exitoso!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-
-                <div class="modal-body">
-                    ¡Gracias por suscribirte a nuestro Newsletter!
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-
+        <!--TEXTO FIJO SOBRE EL SLIDER-->
+            <div class="slider-text">
+                <h1>Sabores Libres</h1>
+                <p>Descubrí el verdadero placer de comer sin preocupaciones</p>
             </div>
-        </div>
-        </div>
+    </header>
 
 
-        <!-- Reseñas -->
-        <section class="resenas container">
-            <div class="row g-4">
+    <!--ÁREA DINÁMICA (FONDO BEIGE) -->
 
-                <div class="col-md-3">
-                    <div class="resena-box">
-                        <h4>María S.</h4>
-                        <h5>Seguridad y Confianza Absoluta</h5>
-                        <p>"¡Finalmente un lugar donde puedo relajarme y disfrutar de una comida completa sin miedo a la contaminación cruzada! El personal está altamente capacitado y se nota el cuidado en cada detalle. Pedimos desde empanadas hasta pastas, y todo, absolutamente todo, estaba delicioso y, lo más importante, 100% seguro. Un 10 para la tranquilidad que ofrecen."</p>
+    <!--LÍNEA DIVISORIA-->
+    <div class="seccion-divider"></div>
+
+    <!--SECCIÓN TIENDA-->
+        <section id="seccion-tienda" class="bg1 py-5">
+            <div class="container text-center">
+
+                <h2 class="mb-4 titulo-seccion">TIENDA</h2>
+
+                <!-- GRID DE PRODUCTOS -->
+                <div class="row justify-content-center g-4 tienda-grid">
+
+                    <!-- PRODUCTO 1 -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="producto card-producto shadow-sm">
+                            <img src="img/producto1.jpg" class="img-fluid mb-2 producto-img" alt="Producto 1">
+                            <p class="fw-bold producto-nombre">Producto 1</p>
+                            <p class="producto-precio">$1000</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-3">
-                    <div class="resena-box">
-                        <h4>Juan P.</h4>
-                        <h5>Sabor Increíble y Variedad Inigualable </h5>
-                        <p>"Solía pensar que comer sin TACC significaba sacrificar el sabor, ¡pero este restaurante me demostró lo contrario! La carta es súper variada, probamos la pizza y unos sorrentinos de cuatro quesos que estaban espectaculares. La textura y el sabor son idénticos a los platos con gluten. ¡Altamente recomendable incluso para quienes no son celíacos!"</p>
+                    <!-- PRODUCTO 2 -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="producto card-producto shadow-sm">
+                            <img src="img/producto2.jpg" class="img-fluid mb-2 producto-img" alt="Producto 2">
+                            <p class="fw-bold producto-nombre">Producto 2</p>
+                            <p class="producto-precio">$1000</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-3">
-                    <div class="resena-box">
-                        <h4>Ana G.</h4>
-                        <h5>La Mejor Experiencia Gastronómica Sin Gluten </h5>
-                        <p>"Desde la atención del personal, que es súper atenta y cálida, hasta la ambientación del lugar, la experiencia fue perfecta. Tienen opciones de postres increíbles (el brownie con dulce de leche es un sueño) y hasta cerveza sin TACC. Es un lugar ideal para ir con amigos o familia y que todos disfruten por igual. ¡Mi nuevo lugar favorito en la ciudad!"</p>
+                    <!-- PRODUCTO 3 -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="producto card-producto shadow-sm">
+                            <img src="img/producto3.jpg" class="img-fluid mb-2 producto-img" alt="Producto 3">
+                            <p class="fw-bold producto-nombre">Producto 3</p>
+                            <p class="producto-precio">$1000</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-3">
-                    <div class="resena-box">
-                        <h4>Carlos L.</h4>
-                        <h5>Innovación y Platos Caseros de Calidad </h5>
-                        <p>"Un hallazgo extraordinario. Ofrecen platos caseros, sabrosos y con una calidad que se nota en cada bocado. La focaccia rellena y la sopa de calabaza fueron un éxito total. Además, la posibilidad de llevarte productos a casa es un plus. Se nota la pasión por la gastronomía sin gluten. ¡Volveremos pronto!"</p>
+                    <!-- PRODUCTO 4 -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="producto card-producto shadow-sm">
+                            <img src="img/producto4.jpg" class="img-fluid mb-2 producto-img" alt="Producto 4">
+                            <p class="fw-bold producto-nombre">Producto 4</p>
+                            <p class="producto-precio">$1000</p>
+                        </div>
                     </div>
+
+                    <!-- PRODUCTO 5 -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="producto card-producto shadow-sm">
+                            <img src="img/producto5.jpg" class="img-fluid mb-2 producto-img" alt="Producto 5">
+                            <p class="fw-bold producto-nombre">Producto 5</p>
+                            <p class="producto-precio">$1000</p>
+                        </div>
+                    </div>
+
+                    <!-- PRODUCTO 6 -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="producto card-producto shadow-sm">
+                            <img src="img/producto6.jpg" class="img-fluid mb-2 producto-img" alt="Producto 6">
+                            <p class="fw-bold producto-nombre">Producto 6</p>
+                            <p class="producto-precio">$1000</p>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
         </section>
 
-    </div>
+
+    <!--NEWSLETTER-->
+        <section class="newsletter mt-5">
+            <h3>Entérate de todas nuestras novedades</h3>
+
+            <!-- FORMULARIO -->
+            <form id="formNewsletter" class="mt-3" action="#" method="POST">
+                <input type="email" name="email" placeholder="Ingresá tu email" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+            <!--MODAL REGISTRO EXITOSO-->
+            <div class="modal fade modal-confirm" id="modalNewsletterOk" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title">¡Registro exitoso!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            ¡Gracias por suscribirte a nuestro Newsletter!
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        <!--RESEÑAS-->
+            <section class="resenas container">
+                <div class="row g-4">
+
+                    <div class="col-md-3">
+                        <div class="resena-box">
+                            <h5>María S.</h5>
+                            <h6>Seguridad y Confianza Absoluta</h6>
+                            <p>"¡Finalmente un lugar donde puedo relajarme y disfrutar de una comida completa sin miedo a la contaminación cruzada! El personal está altamente capacitado y se nota el cuidado en cada detalle. Pedimos desde empanadas hasta pastas, y todo, absolutamente todo, estaba delicioso y, lo más importante, 100% seguro. Un 10 para la tranquilidad que ofrecen."</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="resena-box">
+                            <h5>Juan P.</h5>
+                            <h6>Sabor Increíble y Variedad Inigualable </h6>
+                            <p>"Solía pensar que comer sin TACC significaba sacrificar el sabor, ¡pero este restaurante me demostró lo contrario! La carta es súper variada, probamos la pizza y unos sorrentinos de cuatro quesos que estaban espectaculares. La textura y el sabor son idénticos a los platos con gluten. ¡Altamente recomendable incluso para quienes no son celíacos!"</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="resena-box">
+                            <h5>Ana G.</h5>
+                            <h6>La Mejor Experiencia Gastronómica Sin Gluten </h6>
+                            <p>"Desde la atención del personal, que es súper atenta y cálida, hasta la ambientación del lugar, la experiencia fue perfecta. Tienen opciones de postres increíbles (el brownie con dulce de leche es un sueño) y hasta cerveza sin TACC. Es un lugar ideal para ir con amigos o familia y que todos disfruten por igual. ¡Mi nuevo lugar favorito en la ciudad!"</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="resena-box">
+                            <h5>Carlos L.</h5>
+                            <h6>Innovación y Platos Caseros de Calidad </h6>
+                            <p>"Un hallazgo extraordinario. Ofrecen platos caseros, sabrosos y con una calidad que se nota en cada bocado. La focaccia rellena y la sopa de calabaza fueron un éxito total. Además, la posibilidad de llevarte productos a casa es un plus. Se nota la pasión por la gastronomía sin gluten. ¡Volveremos pronto!"</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
 </body>
 
 <!--FOOTER-->
@@ -282,7 +279,6 @@
         </div>
     </div>
 </footer>
-
   
 <script>
     document.getElementById("formNewsletter").addEventListener("submit", function(e){
@@ -292,7 +288,6 @@
         this.reset(); // limpia el formulario
     });
     </script>  
-
 
 <!--BOOTSTRAP SCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
